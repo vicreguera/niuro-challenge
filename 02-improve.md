@@ -109,11 +109,11 @@ Button: **Got it**
 - **Headline:** Good news — **you can apply**
 - Quote recap (compact card): $2,000 · 16 weekly payments of $162.50 · [Change](#)
 - **What's next (about 4 minutes)**
-  1. **About you** — name, phone, date of birth
-  2. **Your business** — what you do and since when
-  3. **Identity check** — your SSN. *Checking it doesn't affect your credit score.* *(to be confirmed with compliance)*
-  4. **Connect your bank** — read-only, through Plaid. We never see your login.
-  5. **See your offer** — nothing is final until you accept it.
+  3. **About you** — name, phone, date of birth
+  4. **Your business** — what you do and since when
+  5. **Identity check** — your SSN. *Checking it doesn't affect your credit score.* *(to be confirmed with compliance)*
+  6. **Connect your bank** — read-only, through Plaid. We never see your login.
+  7. **See your offer** — nothing is final until you accept it.
 - Email label: **Where should we send your quote?** · Placeholder: *you@example.com*
 - Helper: *We'll save your progress. If you stop, the link in this email takes you back to where you were.*
 - Checkbox (unticked): *Send me tips and offers from Fundo by email. You can unsubscribe anytime.*
