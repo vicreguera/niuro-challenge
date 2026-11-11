@@ -47,7 +47,6 @@ with sync_playwright() as p:
     pg.wait_for_selector('text=you can apply')
     noscroll(pg,'C'); pg.screenshot(path=SHOT+'app-C.png', full_page=True)
     pg.get_by_role('button', name='Save my quote and continue').click(); pg.wait_for_timeout(200)
-    print('DBG2', pg.evaluate('document.activeElement.outerHTML')[:160])
     ok('C: empty email error + focus', 'Enter your email' in pg.content() and pg.evaluate('document.activeElement.getAttribute("aria-invalid")')=='true')
     pg.get_by_label(re.compile('Where should we send')).fill('name@example.com')
     pg.get_by_role('button', name='Save my quote and continue').click()
