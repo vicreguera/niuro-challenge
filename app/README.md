@@ -71,17 +71,10 @@ e2e/flows_test.py       Playwright: 49 checks across every flow and edge case
 
 ## How it was verified
 
-With a full `npm install` (React 19, Vite 7, TypeScript 5.9):
-- `npm run typecheck` — `tsc --strict` over the whole app, components included: no errors.
-- `npm test` — unit tests (`src/lib/logic.test.ts`), 11 passing.
-- `npm run build` — production bundle with Vite.
-- `e2e/flows_test.py` against `npm run preview`, headless Chromium at 360 px — **49/49 passing** ([last run](./e2e/last-run.txt), [screens](./e2e/screens)).
-
-To run the E2E suite (needs Python Playwright):
-
-```bash
-npm run build && npm run preview     # serves on http://localhost:4173
-python3 e2e/flows_test.py            # BASE_URL / SHOT_DIR env vars override defaults
-```
+Built in a sandbox without network access to npm, so verification used the locally available toolchain:
+- `tsc --strict` on all logic modules (pricing, eligibility, validation, storage, api, data).
+- Unit tests (`src/lib/logic.test.ts`) — 11 passing.
+- Full bundle with esbuild + React 19, then `e2e/flows_test.py` in headless Chrome at 360 px — **49/49 passing** ([last run](./e2e/last-run.txt), [screens](./e2e/screens)).
+- Not yet run: `tsc` over the React components (needs `@types/react` from `npm install`).
 
 The E2E suite caught three real bugs during the build, all fixed: saves never advanced under React StrictMode; typing a full state name then Enter picked the wrong state; typing over a selected state cleared the field.
