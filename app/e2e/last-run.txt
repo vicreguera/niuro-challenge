@@ -1,0 +1,50 @@
+PASS title on load Step 1 of 7, Your numbers — Fundo
+PASS no horizontal scroll @360 · A simulator scrollWidth=360
+PASS simulator recalculates ($2,100 × 1.25 = $2,625) Your example quote | You get | $2,100 | You pay back in total | $2,625 | 12 weekly payments | $218.75 | Payment day | Ev
+PASS uneven payments: last payment shown ($2,500 / 12) 
+PASS amount clamps to $10,000 with a note 
+PASS "not a loan" sheet opens 
+PASS sheet closes with Escape 
+PASS B: continue disabled until answered 
+PASS state combobox filters as you type 
+PASS no horizontal scroll @360 · B eligibility scrollWidth=360
+PASS D1: unserved state is told before any personal data 
+PASS no horizontal scroll @360 · D1 scrollWidth=360
+PASS combobox empty state message 
+PASS D2: below minimums explains why 
+PASS no horizontal scroll @360 · C scrollWidth=360
+PASS C: empty email error + focus 
+PASS 3: quote-saved banner with email 
+PASS focus moves to new heading 
+PASS 3: all required errors shown 4 errors
+PASS calendar sets date of birth 03/15/1990
+PASS country search by dial code 
+PASS country changed to MX +52 
+PASS US phone formats as typed 
+PASS no horizontal scroll @360 · 3 about scrollWidth=360
+PASS 4: wages shows suitability warning 
+PASS 4: wages blocks continue 
+PASS own name fills business name 
+PASS minority owner: share module replaces Continue 
+PASS share rejects your own email 
+PASS quote shared with owner 
+PASS no horizontal scroll @360 · 4 business scrollWidth=360
+PASS 5a: address errors 
+PASS state locked from answers 
+PASS no horizontal scroll @360 · 5a home scrollWidth=360
+PASS finish-later dialog names the step 
+PASS returning customer sees resume card 
+PASS resume lands on the saved step with answers 
+PASS SSN invalid area rejected 
+PASS SSN masked by default 
+PASS SSN formats 
+PASS SSN never stored in the browser 
+PASS no horizontal scroll @360 · 5b ssn scrollWidth=360
+PASS reaches bank hand-off 
+PASS no console/page errors 
+PASS network error banner + retry, answers kept 
+PASS saving state shows 
+PASS slow-connection reassurance after 5 s 
+PASS dark mode follows the phone rgb(16, 20, 22)
+PASS no horizontal scroll @320 320
+49 pass, 0 fail

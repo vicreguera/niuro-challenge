@@ -1,0 +1,169 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-11T13:05:00Z"
+  },
+  "title": "Fundo Apply Now — Redesign",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Before.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1360,
+      "h": 760,
+      "title": "Before — current Apply Now (screens 01, 10, 12)"
+    },
+    "Main.dc.html": {
+      "x": 0,
+      "y": 1140,
+      "w": 360,
+      "h": 1180,
+      "title": "A · See your numbers (simulator)",
+      "is_interactive": true
+    },
+    "Eligibility.dc.html": {
+      "x": 440,
+      "y": 1140,
+      "w": 360,
+      "h": 1100,
+      "title": "B · Can you apply?",
+      "is_interactive": true
+    },
+    "CanApply.dc.html": {
+      "x": 880,
+      "y": 1140,
+      "w": 360,
+      "h": 1220,
+      "title": "C · You can apply — save your quote",
+      "is_interactive": true
+    },
+    "AboutYou.dc.html": {
+      "x": 1320,
+      "y": 1140,
+      "w": 360,
+      "h": 1180,
+      "title": "3 · About you",
+      "is_interactive": true
+    },
+    "Business.dc.html": {
+      "x": 1760,
+      "y": 1140,
+      "w": 360,
+      "h": 1400,
+      "title": "4 · Your business",
+      "is_interactive": true
+    },
+    "Home.dc.html": {
+      "x": 2200,
+      "y": 1140,
+      "w": 360,
+      "h": 900,
+      "title": "5a · Your home address",
+      "is_interactive": true
+    },
+    "Identity.dc.html": {
+      "x": 2640,
+      "y": 1140,
+      "w": 360,
+      "h": 1040,
+      "title": "5b · Identity check (SSN)",
+      "is_interactive": true
+    },
+    "NotAvailable.dc.html": {
+      "x": 0,
+      "y": 3060,
+      "w": 360,
+      "h": 800,
+      "title": "D1 · State not served",
+      "is_interactive": true
+    },
+    "NotYet.dc.html": {
+      "x": 440,
+      "y": 3060,
+      "w": 360,
+      "h": 820,
+      "title": "D2 · Not yet (below minimums)",
+      "is_interactive": true
+    },
+    "Returning.dc.html": {
+      "x": 880,
+      "y": 3060,
+      "w": 360,
+      "h": 1180,
+      "title": "A · Returning customer + network error + slow connection"
+    },
+    "MainDark.dc.html": {
+      "x": 1320,
+      "y": 3060,
+      "w": 360,
+      "h": 1180,
+      "title": "A · Dark mode"
+    },
+    "CanApplyDark.dc.html": {
+      "x": 1760,
+      "y": 3060,
+      "w": 360,
+      "h": 1220,
+      "title": "C · Dark mode"
+    }
+  },
+  "order": [
+    "Before.dc.html",
+    "Main.dc.html",
+    "Eligibility.dc.html",
+    "CanApply.dc.html",
+    "AboutYou.dc.html",
+    "Business.dc.html",
+    "Home.dc.html",
+    "Identity.dc.html",
+    "NotAvailable.dc.html",
+    "NotYet.dc.html",
+    "Returning.dc.html",
+    "MainDark.dc.html",
+    "CanApplyDark.dc.html"
+  ],
+  "notes": {
+    "t_before": {
+      "x": 0,
+      "y": -300,
+      "text": "Before",
+      "kind": "title1",
+      "maxW": 1360
+    },
+    "t_after": {
+      "x": 0,
+      "y": 840,
+      "text": "After — Apply Now on the unified Fundo system (360 px)",
+      "kind": "title1",
+      "maxW": 3000
+    },
+    "t_edges": {
+      "x": 0,
+      "y": 2760,
+      "text": "Branches, edge cases and dark mode",
+      "kind": "title1",
+      "maxW": 2120
+    },
+    "n_system": {
+      "x": 1440,
+      "y": -300,
+      "w": 520,
+      "size": "m",
+      "fill": "blue",
+      "text": "Unified system: primary #0E90E4 (brand) / #0B72B4 (actions), Outfit headings, Roboto text, rem scale, light + dark. Every colour on these screens is a semantic token from fundo.tokens.css. Pricing shown is an illustrative rate card (12 wk ×1.25, 16 wk ×1.30, 20 wk ×1.35) pending Fundo's real pricing and compliance."
+    },
+    "n_flow": {
+      "x": 3080,
+      "y": 1140,
+      "w": 420,
+      "size": "m",
+      "fill": "green",
+      "text": "Flow: A → B → C (or D1 / D2) → About you → Your business → Home address → Identity check → connect bank (out of scope). Press Play on A: the simulator recalculates, B routes by state, time and deposits. Steps 3–5 have “Finish later”: progress is saved and the email link resumes the application (dialog designed on step 3). Long lists (state, country) are type-to-filter comboboxes; date of birth has a calendar; all fields are required unless marked optional."
+    }
+  },
+  "designSystems": []
+}

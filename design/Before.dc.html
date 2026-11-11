@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Before — current Apply Now</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/bc185d4540cd404835b035ea6aca30a0">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="light" style="width: 1360px; height: 760px; box-sizing: border-box; padding: 32px; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-text); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px">
+  <sc-for list="{{shots}}" as="s" hint-placeholder-count="4">
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+      <div style="height: 500px; border-radius: 1rem; overflow: hidden; border: 1px solid var(--border-default); background: var(--surface-default)">
+        <img src="{{s.src}}" alt="{{s.alt}}" style="width: 100%; height: 100%; object-fit: cover; object-position: left top">
+      </div>
+      <figcaption style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 600">{{s.title}}</span>
+        <span style="font-size: 0.875rem; line-height: 1.45; color: var(--text-secondary)">{{s.body}}</span>
+      </figcaption>
+    </figure>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1360,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      shots: [
+        { src: '/_blob/9514b043e4624774a38fe67be09ab01c', alt: 'Current Apply Now screen 01: hero photo and headline', title: '01 · Asks before it explains', body: 'Promises “up to $10,000” and “No credit check”, but never says what it costs. First request: your email.' },
+        { src: '/_blob/feab91a4420b40a82db42f1c97b170e1', alt: 'Current screen 01 email form with chat bubble over the button', title: '01 · CTA covered, consent bundled', body: 'The chat bubble sits on top of “Get Your Advance”. Marketing consent is tied to accepting the Privacy Policy.' },
+        { src: '/_blob/f5e4d902e7fdf2bd58a6e8ea62eda1d3', alt: 'Current screen 10 asking for home address and state', title: '10 · State asked too late', body: 'CA and NY residents learn here — after 9 screens — that Fundo can’t serve them. The state select truncates at 360 px.' },
+        { src: '/_blob/b60822e05af7eacd0b632fed9014f025', alt: 'Current screen 12 asking for SSN', title: '12 · SSN with no cost, no why', body: '“As a regulated financial service provider” is a claim for compliance, not a reason. No word on credit impact or what comes next.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

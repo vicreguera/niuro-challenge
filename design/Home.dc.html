@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Step 5 of 7, Identity check: home address — Fundo</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/bc185d4540cd404835b035ea6aca30a0">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="light" style="width: 100%; max-width: 360px; min-height: 900px; box-sizing: border-box; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-text); font-size: 1rem; line-height: 1.5; display: flex; flex-direction: column">
+  <header style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: var(--surface-default); border-bottom: 1px solid var(--border-default)">
+    <a href="Business.dc.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; color: var(--text-primary)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <img src="/_blob/b05416141ebb803767d51d5df875965f" alt="Fundo" style="height: 22px; width: auto">
+    <a href="Returning.dc.html" style="min-width: 44px; height: 44px; display: flex; align-items: center; justify-content: flex-end; font-weight: 500; font-size: 0.875rem; text-decoration: none; color: var(--text-link)">Finish later</a>
+  </header>
+
+  <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; justify-content: space-between; gap: 8px">
+        <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--text-tertiary); font-weight: 500">Step 5 of 7 · Identity check</p>
+        <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--success-text); font-weight: 500">Progress saved</p>
+      </div>
+      <div role="progressbar" aria-label="Application progress" aria-valuemin="1" aria-valuemax="7" aria-valuenow="5" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-family: var(--font-heading); font-size: 2rem; line-height: 1.15; font-weight: 700">Your <span style="color: var(--brand-primary)">home address</span></h1>
+      <p style="margin: 0; color: var(--text-secondary)">Where you live now. We use it to confirm who you are.</p>
+      <p style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">All fields are required unless marked optional.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label for="addr" style="font-size: 0.875rem; font-weight: 500">Street address</label>
+      <div style="position: relative">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; left: 12px; top: 14px"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="addr" required aria-required="true" autocomplete="street-address" value="2150 Coral Way" aria-describedby="addr-help" aria-expanded="true" aria-controls="addr-list" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px 0 40px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 2px solid var(--border-focus); border-radius: 0.5rem">
+      </div>
+      <ul id="addr-list" role="listbox" aria-label="Address suggestions" style="margin: 0; padding: 4px 0; list-style: none; background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 0.5rem; box-shadow: 0 8px 24px rgba(16, 20, 22, 0.12)">
+        <li role="option" aria-selected="true" style="padding: 10px 12px; background: var(--primary-subtle); color: var(--on-primary-subtle)"><strong>2150 Coral Way</strong><br><span style="font-size: 0.875rem">Miami, FL 33145</span></li>
+        <li role="option" aria-selected="false" style="padding: 10px 12px"><strong>2150 Coral Way Apt 2</strong><br><span style="font-size: 0.875rem; color: var(--text-secondary)">Miami, FL 33145</span></li>
+      </ul>
+      <p id="addr-help" style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">Start typing and pick your address. City and ZIP fill in for you.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label for="apt" style="font-size: 0.875rem; font-weight: 500">Apartment, suite <span style="font-weight: 400; color: var(--text-tertiary)">(optional)</span></label>
+      <input id="apt" autocomplete="address-line2" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--surface-sunken); border-radius: 0.5rem; padding: 12px">
+      <div style="display: flex; flex-direction: column">
+        <span style="font-size: 0.75rem; color: var(--text-secondary)">State (from your answers)</span>
+        <span style="font-weight: 500">Florida</span>
+      </div>
+      <a href="Eligibility.dc.html" style="font-size: 0.875rem; font-weight: 500; color: var(--text-link); min-height: 44px; display: flex; align-items: center">Wrong state?</a>
+    </div>
+
+    <a href="Identity.dc.html" style="margin-top: auto; min-height: 52px; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); display: flex; align-items: center; justify-content: center; font-weight: 500; text-decoration: none">Continue</a>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Step 4 of 7, Your business — Fundo</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/bc185d4540cd404835b035ea6aca30a0">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="light" style="width: 100%; max-width: 360px; min-height: 1120px; box-sizing: border-box; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-text); font-size: 1rem; line-height: 1.5; display: flex; flex-direction: column">
+  <header style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: var(--surface-default); border-bottom: 1px solid var(--border-default)">
+    <a href="AboutYou.dc.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; color: var(--text-primary)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <img src="/_blob/b05416141ebb803767d51d5df875965f" alt="Fundo" style="height: 22px; width: auto">
+    <a href="Returning.dc.html" style="min-width: 44px; height: 44px; display: flex; align-items: center; justify-content: flex-end; font-weight: 500; font-size: 0.875rem; text-decoration: none; color: var(--text-link)">Finish later</a>
+  </header>
+
+  <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; justify-content: space-between; gap: 8px">
+        <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--text-tertiary); font-weight: 500">Step 4 of 7 · Your business</p>
+        <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--success-text); font-weight: 500">Progress saved</p>
+      </div>
+      <div role="progressbar" aria-label="Application progress" aria-valuemin="1" aria-valuemax="7" aria-valuenow="4" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-family: var(--font-heading); font-size: 2rem; line-height: 1.15; font-weight: 700">How you <span style="color: var(--brand-primary)">get paid</span></h1>
+      <p style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">All fields are required unless marked optional.</p>
+    </div>
+
+    <div role="radiogroup" aria-labelledby="pay-label" style="display: flex; flex-direction: column; gap: 8px">
+      <span id="pay-label" style="font-size: 0.875rem; font-weight: 500">Where does most of your work money come from?</span>
+      <sc-for list="{{incomes}}" as="o" hint-placeholder-count="3">
+        <button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="{{o.style}}">
+          <span style="display: flex; flex-direction: column; gap: 2px; text-align: left">
+            <span style="font-weight: 500; color: var(--text-primary)">{{o.title}}</span>
+            <span style="font-size: 0.875rem; color: var(--text-secondary)">{{o.body}}</span>
+          </span>
+          <span aria-hidden="true" style="{{o.dot}}"></span>
+        </button>
+      </sc-for>
+      <sc-if value="{{showJobNote}}" hint-placeholder-val="{{false}}">
+        <div role="status" style="background: var(--warning-subtle); color: var(--on-warning-subtle); border: 1px solid var(--warning-border); border-radius: 0.5rem; padding: 12px; font-size: 0.875rem">Fundo advances are for money you earn from your own work, not wages or benefits. If you also drive, freelance or sell, choose that option. <a href="#" style="color: var(--on-warning-subtle); font-weight: 500">See other options</a></div>
+      </sc-if>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label for="bn" style="font-size: 0.875rem; font-weight: 500">Business name</label>
+      <input id="bn" required aria-required="true" autocomplete="organization" placeholder="e.g. Rosa’s Cleaning" disabled="{{useMyName}}" style="{{nameStyle}}">
+      <label style="display: flex; gap: 12px; align-items: center; font-size: 0.875rem; color: var(--text-secondary); min-height: 44px; cursor: pointer">
+        <input type="checkbox" onChange="{{toggleName}}" style="width: 20px; height: 20px; margin: 0; accent-color: var(--action-primary); flex-shrink: 0">
+        <span>I don’t have a business name — use my own name</span>
+      </label>
+    </div>
+
+    <div role="radiogroup" aria-labelledby="own-label" style="display: flex; flex-direction: column; gap: 8px">
+      <span id="own-label" style="font-size: 0.875rem; font-weight: 500">How much of the business do you own?</span>
+      <span style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: -4px">The person who owns most of it needs to apply.</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <sc-for list="{{owns}}" as="o" hint-placeholder-count="2">
+          <button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="{{o.style}}">{{o.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <sc-if value="{{showShare}}" hint-placeholder-val="{{false}}">
+      <section aria-labelledby="share-title" style="display: flex; flex-direction: column; gap: 12px; background: var(--primary-subtle); color: var(--on-primary-subtle); border: 1px solid var(--color-primary-200); border-radius: 1rem; padding: 16px">
+        <h2 id="share-title" style="margin: 0; font-family: var(--font-heading); font-size: 1.25rem; line-height: 1.3; font-weight: 600">The majority owner needs to apply</h2>
+        <p style="margin: 0; font-size: 0.875rem">Fundo needs the person who owns more than half of the business to apply. Send them your quote — they’ll get a link to pick up from here, with your answers so far.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <label for="owner-email" style="font-size: 0.875rem; font-weight: 500">Their email</label>
+          <input id="owner-email" type="email" required aria-required="true" autocomplete="off" placeholder="owner@example.com" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+          <p style="margin: 0; font-size: 0.75rem">We’ll only send this quote. We won’t add them to any marketing list.</p>
+        </div>
+        <sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+          <button type="button" onClick="{{send}}" style="min-height: 52px; border: 0; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); font: 500 1rem var(--font-text); cursor: pointer">Send quote</button>
+        </sc-if>
+        <sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+          <p role="status" style="margin: 0; display: flex; gap: 8px; align-items: center; font-weight: 500; color: var(--success-text)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Quote sent. We’ll let you know when they continue.
+          </p>
+        </sc-if>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{showContinue}}" hint-placeholder-val="{{true}}">
+      <a href="Home.dc.html" style="margin-top: auto; min-height: 52px; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); display: flex; align-items: center; justify-content: center; font-weight: 500; text-decoration: none">Continue</a>
+    </sc-if>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":1120}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { income: '', own: '', useMyName: false, sent: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const INCOMES = [
+      ['apps', 'Payouts from apps', 'Uber, Lyft, DoorDash, Instacart, Upwork…'],
+      ['clients', 'Payments from my own customers', 'A shop, salon, food truck, trade or service'],
+      ['job', 'Wages or benefits', 'A paycheck from an employer, unemployment, disability or retirement'],
+    ];
+    const card = (on) => 'display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 64px; padding: 12px 16px; border-radius: 1rem; cursor: pointer; font: inherit; ' +
+      (on ? 'background: var(--primary-subtle); border: 2px solid var(--brand-primary);' : 'background: var(--surface-default); border: 1px solid var(--border-strong);');
+    const dot = (on) => 'flex-shrink: 0; width: 20px; height: 20px; border-radius: 9999px; box-sizing: border-box; ' +
+      (on ? 'border: 6px solid var(--action-primary); background: var(--surface-default);' : 'border: 2px solid var(--border-strong);');
+    const chip = (on) => 'min-height: 48px; border-radius: 9999px; font: 500 0.875rem var(--font-text); cursor: pointer; ' +
+      (on ? 'background: var(--primary-subtle); color: var(--on-primary-subtle); border: 2px solid var(--brand-primary);'
+          : 'background: var(--surface-default); color: var(--text-primary); border: 1px solid var(--border-strong);');
+    return {
+      incomes: INCOMES.map((x) => ({ title: x[1], body: x[2], checked: String(s.income === x[0]), style: card(s.income === x[0]), dot: dot(s.income === x[0]), pick: () => this.setState({ income: x[0] }) })),
+      showJobNote: s.income === 'job',
+      owns: [['51', 'More than half'], ['50', 'Half or less']].map((x) => ({ label: x[1], checked: String(s.own === x[0]), style: chip(s.own === x[0]), pick: () => this.setState({ own: x[0] }) })),
+      showShare: s.own === '50',
+      showContinue: s.own !== '50',
+      sent: s.sent,
+      notSent: !s.sent,
+      send: () => this.setState({ sent: true }),
+      useMyName: s.useMyName,
+      toggleName: () => this.setState({ useMyName: !s.useMyName }),
+      nameStyle: 'min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); border-radius: 0.5rem; border: 1px solid var(--border-strong); ' +
+        (s.useMyName ? 'background: var(--action-disabled); color: var(--on-action-disabled);' : 'background: var(--surface-default); color: var(--text-primary);'),
+    };
+  }
+}
+</script>
+</body>
+</html>

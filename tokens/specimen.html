@@ -1,0 +1,455 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fundo Tokens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary-50: #E7F5FE;
+  --color-primary-100: #C3E5FB;
+  --color-primary-200: #93D0F8;
+  --color-primary-300: #63BCF5;
+  --color-primary-400: #33A7F2;
+  --color-primary-500: #0E90E4;
+  --color-primary-600: #0B72B4;
+  --color-primary-700: #085384;
+  --color-primary-800: #053554;
+  --color-primary-900: #021724;
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #F0F3F4;
+  --color-neutral-100: #DBE0E3;
+  --color-neutral-200: #BDC7CE;
+  --color-neutral-300: #A0AEB8;
+  --color-neutral-400: #8396A2;
+  --color-neutral-500: #687D8A;
+  --color-neutral-600: #52626D;
+  --color-neutral-700: #3C4850;
+  --color-neutral-800: #262E33;
+  --color-neutral-900: #101416;
+  --color-success-50: #E9FBF1;
+  --color-success-100: #C9F5DB;
+  --color-success-200: #9EEDBF;
+  --color-success-300: #74E4A3;
+  --color-success-400: #49DC86;
+  --color-success-500: #27CB6B;
+  --color-success-600: #1FA055;
+  --color-success-700: #16763E;
+  --color-success-800: #0E4B27;
+  --color-success-900: #062011;
+  --color-error-50: #FBE9E9;
+  --color-error-100: #F6C8C8;
+  --color-error-200: #EF9C9C;
+  --color-error-300: #E87070;
+  --color-error-400: #E14444;
+  --color-error-500: #D02222;
+  --color-error-600: #A41B1B;
+  --color-error-700: #781414;
+  --color-error-800: #4D0C0C;
+  --color-error-900: #210505;
+  --color-warning-50: #FEF5E6;
+  --color-warning-100: #FCE7C2;
+  --color-warning-200: #FAD491;
+  --color-warning-300: #F8C060;
+  --color-warning-400: #F6AD2F;
+  --color-warning-500: #E8970A;
+  --color-warning-600: #B77708;
+  --color-warning-700: #865706;
+  --color-warning-800: #553704;
+  --color-warning-900: #241802;
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-text: 'Roboto', system-ui, sans-serif;
+  --type-display-family: var(--font-heading);
+  --type-display-size: 2.5rem;
+  --type-display-line-height: 1.1;
+  --type-display-weight: 700;
+  --type-heading-1-family: var(--font-heading);
+  --type-heading-1-size: 2rem;
+  --type-heading-1-line-height: 1.15;
+  --type-heading-1-weight: 700;
+  --type-heading-2-family: var(--font-heading);
+  --type-heading-2-size: 1.5rem;
+  --type-heading-2-line-height: 1.2;
+  --type-heading-2-weight: 700;
+  --type-heading-3-family: var(--font-heading);
+  --type-heading-3-size: 1.25rem;
+  --type-heading-3-line-height: 1.3;
+  --type-heading-3-weight: 600;
+  --type-heading-4-family: var(--font-heading);
+  --type-heading-4-size: 1.125rem;
+  --type-heading-4-line-height: 1.35;
+  --type-heading-4-weight: 600;
+  --type-amount-family: var(--font-heading);
+  --type-amount-size: 1.75rem;
+  --type-amount-line-height: 1.1;
+  --type-amount-weight: 600;
+  --type-body-lg-family: var(--font-text);
+  --type-body-lg-size: 1.125rem;
+  --type-body-lg-line-height: 1.55;
+  --type-body-lg-weight: 400;
+  --type-body-family: var(--font-text);
+  --type-body-size: 1rem;
+  --type-body-line-height: 1.5;
+  --type-body-weight: 400;
+  --type-body-sm-family: var(--font-text);
+  --type-body-sm-size: 0.875rem;
+  --type-body-sm-line-height: 1.45;
+  --type-body-sm-weight: 400;
+  --type-label-family: var(--font-text);
+  --type-label-size: 0.875rem;
+  --type-label-line-height: 1.3;
+  --type-label-weight: 500;
+  --type-caption-family: var(--font-text);
+  --type-caption-size: 0.75rem;
+  --type-caption-line-height: 1.35;
+  --type-caption-weight: 400;
+  --space-0: 0rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-none: 0rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  --surface-page: var(--color-neutral-50);
+  --surface-default: var(--color-neutral-0);
+  --surface-sunken: var(--color-neutral-100);
+  --surface-raised: var(--color-neutral-0);
+  --surface-inverse: var(--color-neutral-900);
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-700);
+  --text-tertiary: var(--color-neutral-600);
+  --text-disabled: var(--color-neutral-400);
+  --text-inverse: var(--color-neutral-0);
+  --text-link: var(--color-primary-600);
+  --border-default: var(--color-neutral-200);
+  --border-strong: var(--color-neutral-400);
+  --border-focus: var(--color-primary-500);
+  --brand-primary: var(--color-primary-500);
+  --action-primary: var(--color-primary-600);
+  --action-primary-hover: var(--color-primary-700);
+  --action-primary-pressed: var(--color-primary-800);
+  --on-action-primary: var(--color-neutral-0);
+  --action-disabled: var(--color-neutral-100);
+  --on-action-disabled: var(--color-neutral-400);
+  --primary-subtle: var(--color-primary-50);
+  --on-primary-subtle: var(--color-primary-800);
+  --success-solid: var(--color-success-700);
+  --on-success-solid: var(--color-neutral-0);
+  --success-text: var(--color-success-700);
+  --success-subtle: var(--color-success-50);
+  --on-success-subtle: var(--color-success-800);
+  --success-border: var(--color-success-300);
+  --error-solid: var(--color-error-600);
+  --on-error-solid: var(--color-neutral-0);
+  --error-text: var(--color-error-600);
+  --error-subtle: var(--color-error-50);
+  --on-error-subtle: var(--color-error-800);
+  --error-border: var(--color-error-300);
+  --warning-solid: var(--color-warning-400);
+  --on-warning-solid: var(--color-neutral-900);
+  --warning-text: var(--color-warning-700);
+  --warning-subtle: var(--color-warning-50);
+  --on-warning-subtle: var(--color-warning-800);
+  --warning-border: var(--color-warning-300);
+  color-scheme: light;
+}
+
+/* Desktop type sizes (mobile-first: the defaults above are the phone sizes) */
+@media (min-width: 48rem) {
+  :root {
+    --type-display-size: 3rem;
+    --type-heading-1-size: 2.25rem;
+    --type-heading-2-size: 1.75rem;
+    --type-heading-3-size: 1.375rem;
+    --type-amount-size: 2rem;
+  }
+}
+
+/* Dark mode: follows the OS unless a theme is forced with data-theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface-page: var(--color-neutral-900);
+    --surface-default: var(--color-neutral-800);
+    --surface-sunken: var(--color-neutral-900);
+    --surface-raised: var(--color-neutral-700);
+    --surface-inverse: var(--color-neutral-50);
+    --text-primary: var(--color-neutral-50);
+    --text-secondary: var(--color-neutral-200);
+    --text-tertiary: var(--color-neutral-300);
+    --text-disabled: var(--color-neutral-500);
+    --text-inverse: var(--color-neutral-900);
+    --text-link: var(--color-primary-300);
+    --border-default: var(--color-neutral-700);
+    --border-strong: var(--color-neutral-400);
+    --border-focus: var(--color-primary-300);
+    --brand-primary: var(--color-primary-400);
+    --action-primary: var(--color-primary-400);
+    --action-primary-hover: var(--color-primary-300);
+    --action-primary-pressed: var(--color-primary-200);
+    --on-action-primary: var(--color-neutral-900);
+    --action-disabled: var(--color-neutral-700);
+    --on-action-disabled: var(--color-neutral-400);
+    --primary-subtle: var(--color-primary-900);
+    --on-primary-subtle: var(--color-primary-100);
+    --success-solid: var(--color-success-400);
+    --on-success-solid: var(--color-neutral-900);
+    --success-text: var(--color-success-300);
+    --success-subtle: var(--color-success-900);
+    --on-success-subtle: var(--color-success-100);
+    --success-border: var(--color-success-700);
+    --error-solid: var(--color-error-300);
+    --on-error-solid: var(--color-neutral-900);
+    --error-text: var(--color-error-300);
+    --error-subtle: var(--color-error-900);
+    --on-error-subtle: var(--color-error-100);
+    --error-border: var(--color-error-700);
+    --warning-solid: var(--color-warning-400);
+    --on-warning-solid: var(--color-neutral-900);
+    --warning-text: var(--color-warning-300);
+    --warning-subtle: var(--color-warning-900);
+    --on-warning-subtle: var(--color-warning-100);
+    --warning-border: var(--color-warning-700);
+    color-scheme: dark;
+  }
+}
+
+/* Forced themes: on <html> or on any container (e.g. a design artboard) */
+:root[data-theme='dark'], [data-theme='dark'] {
+  --surface-page: var(--color-neutral-900);
+  --surface-default: var(--color-neutral-800);
+  --surface-sunken: var(--color-neutral-900);
+  --surface-raised: var(--color-neutral-700);
+  --surface-inverse: var(--color-neutral-50);
+  --text-primary: var(--color-neutral-50);
+  --text-secondary: var(--color-neutral-200);
+  --text-tertiary: var(--color-neutral-300);
+  --text-disabled: var(--color-neutral-500);
+  --text-inverse: var(--color-neutral-900);
+  --text-link: var(--color-primary-300);
+  --border-default: var(--color-neutral-700);
+  --border-strong: var(--color-neutral-400);
+  --border-focus: var(--color-primary-300);
+  --brand-primary: var(--color-primary-400);
+  --action-primary: var(--color-primary-400);
+  --action-primary-hover: var(--color-primary-300);
+  --action-primary-pressed: var(--color-primary-200);
+  --on-action-primary: var(--color-neutral-900);
+  --action-disabled: var(--color-neutral-700);
+  --on-action-disabled: var(--color-neutral-400);
+  --primary-subtle: var(--color-primary-900);
+  --on-primary-subtle: var(--color-primary-100);
+  --success-solid: var(--color-success-400);
+  --on-success-solid: var(--color-neutral-900);
+  --success-text: var(--color-success-300);
+  --success-subtle: var(--color-success-900);
+  --on-success-subtle: var(--color-success-100);
+  --success-border: var(--color-success-700);
+  --error-solid: var(--color-error-300);
+  --on-error-solid: var(--color-neutral-900);
+  --error-text: var(--color-error-300);
+  --error-subtle: var(--color-error-900);
+  --on-error-subtle: var(--color-error-100);
+  --error-border: var(--color-error-700);
+  --warning-solid: var(--color-warning-400);
+  --on-warning-solid: var(--color-neutral-900);
+  --warning-text: var(--color-warning-300);
+  --warning-subtle: var(--color-warning-900);
+  --on-warning-subtle: var(--color-warning-100);
+  --warning-border: var(--color-warning-700);
+  color-scheme: dark;
+}
+
+:root[data-theme='light'], [data-theme='light'] {
+  --surface-page: var(--color-neutral-50);
+  --surface-default: var(--color-neutral-0);
+  --surface-sunken: var(--color-neutral-100);
+  --surface-raised: var(--color-neutral-0);
+  --surface-inverse: var(--color-neutral-900);
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-700);
+  --text-tertiary: var(--color-neutral-600);
+  --text-disabled: var(--color-neutral-400);
+  --text-inverse: var(--color-neutral-0);
+  --text-link: var(--color-primary-600);
+  --border-default: var(--color-neutral-200);
+  --border-strong: var(--color-neutral-400);
+  --border-focus: var(--color-primary-500);
+  --brand-primary: var(--color-primary-500);
+  --action-primary: var(--color-primary-600);
+  --action-primary-hover: var(--color-primary-700);
+  --action-primary-pressed: var(--color-primary-800);
+  --on-action-primary: var(--color-neutral-0);
+  --action-disabled: var(--color-neutral-100);
+  --on-action-disabled: var(--color-neutral-400);
+  --primary-subtle: var(--color-primary-50);
+  --on-primary-subtle: var(--color-primary-800);
+  --success-solid: var(--color-success-700);
+  --on-success-solid: var(--color-neutral-0);
+  --success-text: var(--color-success-700);
+  --success-subtle: var(--color-success-50);
+  --on-success-subtle: var(--color-success-800);
+  --success-border: var(--color-success-300);
+  --error-solid: var(--color-error-600);
+  --on-error-solid: var(--color-neutral-0);
+  --error-text: var(--color-error-600);
+  --error-subtle: var(--color-error-50);
+  --on-error-subtle: var(--color-error-800);
+  --error-border: var(--color-error-300);
+  --warning-solid: var(--color-warning-400);
+  --on-warning-solid: var(--color-neutral-900);
+  --warning-text: var(--color-warning-700);
+  --warning-subtle: var(--color-warning-50);
+  --on-warning-subtle: var(--color-warning-800);
+  --warning-border: var(--color-warning-300);
+  color-scheme: light;
+}
+
+*{box-sizing:border-box} body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-text);font-size:var(--type-body-size);line-height:var(--type-body-line-height)}
+header{background:var(--surface-default);border-bottom:1px solid var(--border-default);padding:var(--space-4);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);position:sticky;top:0;z-index:2}
+header .logo{height:28px;width:auto} main{max-width:72rem;margin:0 auto;padding:var(--space-6) var(--space-4) var(--space-16)}
+h1,h2,h3{font-family:var(--font-heading);margin:0 0 var(--space-3)} h1{font-size:var(--type-heading-1-size);line-height:var(--type-heading-1-line-height)}
+h2{font-size:var(--type-heading-2-size);margin-top:var(--space-12)} h3{font-size:var(--type-heading-4-size);text-transform:capitalize;margin-top:var(--space-6)}
+p.lead{color:var(--text-secondary);max-width:44rem}
+.row{display:grid;grid-template-columns:repeat(auto-fill,minmax(6.5rem,1fr));gap:var(--space-2)}
+.sw{background:var(--surface-default);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-2);display:flex;flex-direction:column;gap:2px;font-size:var(--type-caption-size)}
+.chip{height:2.5rem;border-radius:var(--radius-sm);border:1px solid var(--border-default)} .sw code{font-size:.7rem} .sw small{color:var(--text-tertiary)}
+table{width:100%;border-collapse:collapse;background:var(--surface-default);border-radius:var(--radius-lg);overflow:hidden;font-size:var(--type-body-sm-size)}
+th,td{text-align:left;padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--border-default)} th{font-weight:500;color:var(--text-secondary)}
+.dot{display:inline-block;width:1rem;height:1rem;border-radius:var(--radius-full);border:1px solid var(--border-strong);vertical-align:middle;margin-right:var(--space-2)}
+.tablewrap{overflow-x:auto}
+.ty{background:var(--surface-default);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:var(--space-4);margin-bottom:var(--space-2)}
+.meta{display:block;font-size:var(--type-caption-size);color:var(--text-tertiary);margin-bottom:var(--space-1)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:var(--space-4)}
+.card{background:var(--surface-default);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:var(--space-5)}
+.btn{font:500 1rem/1 var(--font-text);border:0;border-radius:var(--radius-full);padding:0 var(--space-6);min-height:3rem;cursor:pointer;display:inline-flex;align-items:center;gap:var(--space-2)}
+.btn-primary{background:var(--action-primary);color:var(--on-action-primary)} .btn-primary:hover{background:var(--action-primary-hover)} .btn-primary:active{background:var(--action-primary-pressed)}
+.btn-secondary{background:transparent;color:var(--text-link);box-shadow:inset 0 0 0 1px var(--border-strong)}
+.btn:disabled{background:var(--action-disabled);color:var(--on-action-disabled);cursor:not-allowed}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--border-focus);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:center} .help{font-size:var(--type-body-sm-size);color:var(--text-tertiary);width:100%}
+label{display:block;font-weight:500;font-size:var(--type-label-size);margin-bottom:var(--space-1)}
+input{width:100%;font:1rem var(--font-text);padding:var(--space-3);border:1px solid var(--border-strong);border-radius:var(--radius-md);background:var(--surface-default);color:var(--text-primary)}
+input[aria-invalid=true]{border-color:var(--error-solid)} .err{color:var(--error-text);font-size:var(--type-body-sm-size);margin-top:var(--space-1)}
+.quote dl{display:grid;grid-template-columns:1fr auto;gap:var(--space-2) var(--space-4);margin:0} .quote dt{color:var(--text-secondary)} .quote dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+.quote .big{font-family:var(--type-amount-family);font-size:var(--type-amount-size);font-weight:var(--type-amount-weight);line-height:1.1;color:var(--text-primary)}
+.quote hr{border:0;border-top:1px solid var(--border-default);margin:var(--space-3) 0} .fine{font-size:var(--type-caption-size);color:var(--text-tertiary);margin-top:var(--space-3)}
+.alert{border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);border:1px solid;margin-bottom:var(--space-2);font-size:var(--type-body-sm-size)}
+.a-success{background:var(--success-subtle);color:var(--on-success-subtle);border-color:var(--success-border)}
+.a-warning{background:var(--warning-subtle);color:var(--on-warning-subtle);border-color:var(--warning-border)}
+.a-error{background:var(--error-subtle);color:var(--on-error-subtle);border-color:var(--error-border)}
+.badges{display:flex;gap:var(--space-2);flex-wrap:wrap} .badge{border-radius:var(--radius-full);padding:var(--space-1) var(--space-3);font-size:var(--type-label-size);font-weight:500}
+.logos{display:flex;gap:var(--space-4);flex-wrap:wrap} .logos div{border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:center;justify-content:center;flex:1 1 14rem}
+.logos .logo{width:100%;max-width:12rem;height:auto}
+.spacer{display:flex;align-items:flex-end;gap:var(--space-3);flex-wrap:wrap} .spacer div{background:var(--brand-primary);border-radius:var(--radius-sm)} .spacer span{display:block;font-size:.7rem;color:var(--text-tertiary);text-align:center}
+.radii{display:flex;gap:var(--space-3);flex-wrap:wrap} .radii div{width:4.5rem;height:3rem;background:var(--primary-subtle);border:1px solid var(--brand-primary);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--on-primary-subtle)}
+#theme{white-space:nowrap}
+</style></head><body>
+<header><svg class="logo" role="img" aria-label="Fundo" width="686" height="187" viewBox="0 0 686 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M497.986 0.189407C507.601 0.0757822 521.945 -0.223844 531.328 0.295906C532.033 5.94716 531.729 22.6864 531.639 29.1192C531.421 44.3224 532.119 61.125 531.519 76.1123C530.435 77.6577 528.939 79.158 527.6 80.502C517.37 90.7834 508.753 102.251 499.569 113.418C498.74 106.297 497.533 100.327 493.633 94.1472C488.788 86.352 480.988 80.8534 472.021 78.9049C462.493 76.8334 452.979 78.2108 444.496 83.5429C419.285 99.3934 424.411 146.883 455.008 152.902C476.731 156.708 493.621 134.643 505.393 119.782C527.754 91.5447 551.844 61.0118 588.245 51.1827C600.804 47.7919 615.598 46.3414 628.494 48.7452C646.843 52.1382 663.088 62.697 673.64 78.0897C683.851 93.3784 687.545 112.106 683.896 130.128C675.44 172.038 631.49 195.825 591.725 181.275C576.946 175.863 565.666 165.678 557.083 152.677C551.761 143.767 550.22 138.6 547.944 128.756C559.036 115.41 571.408 103.785 586.141 94.5822C580.948 104.028 579.759 112.533 580.929 123.273C581.953 132.731 586.723 141.386 594.174 147.307C609.178 159.071 632.983 155.921 644.03 140.505C650.615 131.602 652.603 120.243 650.964 109.32C647.266 84.723 626.499 76.0384 603.92 79.6467C596.69 80.7604 589.7 83.0738 583.235 86.4912C566.289 95.5609 542.319 120.551 531.046 136.11C532.044 139.751 531.976 177.69 531.193 182.088C521.169 182.347 507.909 182.37 497.964 182.062L497.983 171.255C486.988 178.957 476.266 185.426 462.313 185.992C445.55 186.536 429.256 180.405 417.009 168.945C402.751 155.576 395.694 138.791 395.154 119.34C394.606 99.7084 399.834 80.8688 413.623 66.4575C425.15 54.4118 438.459 47.9854 455.225 47.6254C472.711 47.25 485.54 53.0104 497.975 64.9782C497.72 43.7044 497.84 21.4774 497.986 0.189407Z" fill="url(#paint0_linear_7012_13)"/>
+<path d="M0.0277519 7.56653C6.07988 7.3899 12.3334 7.41992 18.3904 7.4788C49.6961 7.78255 81.171 7.02504 112.459 7.56092C112.998 15.4112 112.919 32.7276 112.458 40.5598C104.224 40.8797 95.2598 40.7192 86.9655 40.7173C69.4279 40.6505 51.8895 40.676 34.3519 40.7942C34.9631 52.5152 34.8488 67.7885 34.425 79.583C54.6293 79.7143 75.225 79.2763 95.3831 79.6828C95.9003 86.4538 95.5575 97.103 95.5477 104.131L95.502 112.797C76.3538 113.464 53.8571 112.872 34.3688 112.909C34.8806 122.479 34.6695 133.077 34.6721 142.763C34.7205 155.858 34.6894 168.953 34.5788 182.044C27.3094 182.449 7.22775 182.438 0 181.992L0.0277519 7.56653Z" fill="url(#paint1_linear_7012_13)"/>
+<path d="M330.391 47.8328C331.854 47.655 334.899 47.6261 336.507 47.625C348.256 47.6768 359.521 52.3328 367.876 60.594C383.015 75.7031 379.865 100.294 379.869 120.06L379.846 182.13C369.627 182.355 357.069 182.337 346.914 182.067L346.887 132.293C346.884 120.372 347.225 108.158 345.376 96.3604C342.264 76.4749 321.698 72.9701 307.757 84.6536C307.541 84.8558 307.329 85.0612 307.12 85.2705C294.284 98.1641 296.603 120.803 296.607 137.629L296.597 182.082C286.763 182.389 273.132 182.359 263.332 182.074C263.034 166.013 263.283 149.108 263.282 132.987L263.321 50.6678C274.042 50.4529 285.869 50.538 296.577 50.6858C296.585 54.9465 296.568 59.103 296.782 63.3619C308.936 55.2941 314.486 49.587 330.391 47.8328Z" fill="url(#paint2_linear_7012_13)"/>
+<path d="M125.557 50.7048C136.438 50.4006 148.334 50.5821 159.266 50.6635C159.553 67.471 159.117 84.5391 159.299 101.398C159.098 113.158 159.355 124.28 160.962 135.928C163.51 154.393 188.17 160.411 200.511 147.931C203.429 144.958 205.455 141.223 206.358 137.154C208.328 128.57 207.963 110.368 207.964 101.101L208.015 50.6883C218.748 50.4111 230.335 50.596 241.118 50.6579C242.009 56.2019 241.633 75.2905 241.618 82.0026C241.66 102.759 242.291 131.405 236.774 150.624C227.559 178.258 199.135 189.054 172.603 184.771C122.844 176.743 125.503 133.325 125.477 93.4026L125.557 50.7048Z" fill="url(#paint3_linear_7012_13)"/>
+<defs>
+<linearGradient id="paint0_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+<linearGradient id="paint1_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+<linearGradient id="paint2_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+<linearGradient id="paint3_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+</defs>
+</svg>
+<button id="theme" class="btn btn-secondary" type="button" aria-pressed="false">Dark mode</button></header>
+<main>
+<h1>Fundo design tokens</h1>
+<p class="lead">Built from the fundo.com brand: Outfit for headings, Roboto for text, primary <code>#0E90E4</code>. Every scale moves lightness ±10 per step from its 500; neutrals take the primary’s hue. Semantic tokens map each role to a step for light and dark mode, and every text/background pair is checked against WCAG AA by the build script.</p>
+
+<h2>Logo</h2>
+<div class="logos"><div style="background:var(--surface-default);border:1px solid var(--border-default)"><svg class="logo" role="img" aria-label="Fundo" width="686" height="187" viewBox="0 0 686 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M497.986 0.189407C507.601 0.0757822 521.945 -0.223844 531.328 0.295906C532.033 5.94716 531.729 22.6864 531.639 29.1192C531.421 44.3224 532.119 61.125 531.519 76.1123C530.435 77.6577 528.939 79.158 527.6 80.502C517.37 90.7834 508.753 102.251 499.569 113.418C498.74 106.297 497.533 100.327 493.633 94.1472C488.788 86.352 480.988 80.8534 472.021 78.9049C462.493 76.8334 452.979 78.2108 444.496 83.5429C419.285 99.3934 424.411 146.883 455.008 152.902C476.731 156.708 493.621 134.643 505.393 119.782C527.754 91.5447 551.844 61.0118 588.245 51.1827C600.804 47.7919 615.598 46.3414 628.494 48.7452C646.843 52.1382 663.088 62.697 673.64 78.0897C683.851 93.3784 687.545 112.106 683.896 130.128C675.44 172.038 631.49 195.825 591.725 181.275C576.946 175.863 565.666 165.678 557.083 152.677C551.761 143.767 550.22 138.6 547.944 128.756C559.036 115.41 571.408 103.785 586.141 94.5822C580.948 104.028 579.759 112.533 580.929 123.273C581.953 132.731 586.723 141.386 594.174 147.307C609.178 159.071 632.983 155.921 644.03 140.505C650.615 131.602 652.603 120.243 650.964 109.32C647.266 84.723 626.499 76.0384 603.92 79.6467C596.69 80.7604 589.7 83.0738 583.235 86.4912C566.289 95.5609 542.319 120.551 531.046 136.11C532.044 139.751 531.976 177.69 531.193 182.088C521.169 182.347 507.909 182.37 497.964 182.062L497.983 171.255C486.988 178.957 476.266 185.426 462.313 185.992C445.55 186.536 429.256 180.405 417.009 168.945C402.751 155.576 395.694 138.791 395.154 119.34C394.606 99.7084 399.834 80.8688 413.623 66.4575C425.15 54.4118 438.459 47.9854 455.225 47.6254C472.711 47.25 485.54 53.0104 497.975 64.9782C497.72 43.7044 497.84 21.4774 497.986 0.189407Z" fill="url(#paint0_linear_7012_13)"/>
+<path d="M0.0277519 7.56653C6.07988 7.3899 12.3334 7.41992 18.3904 7.4788C49.6961 7.78255 81.171 7.02504 112.459 7.56092C112.998 15.4112 112.919 32.7276 112.458 40.5598C104.224 40.8797 95.2598 40.7192 86.9655 40.7173C69.4279 40.6505 51.8895 40.676 34.3519 40.7942C34.9631 52.5152 34.8488 67.7885 34.425 79.583C54.6293 79.7143 75.225 79.2763 95.3831 79.6828C95.9003 86.4538 95.5575 97.103 95.5477 104.131L95.502 112.797C76.3538 113.464 53.8571 112.872 34.3688 112.909C34.8806 122.479 34.6695 133.077 34.6721 142.763C34.7205 155.858 34.6894 168.953 34.5788 182.044C27.3094 182.449 7.22775 182.438 0 181.992L0.0277519 7.56653Z" fill="url(#paint1_linear_7012_13)"/>
+<path d="M330.391 47.8328C331.854 47.655 334.899 47.6261 336.507 47.625C348.256 47.6768 359.521 52.3328 367.876 60.594C383.015 75.7031 379.865 100.294 379.869 120.06L379.846 182.13C369.627 182.355 357.069 182.337 346.914 182.067L346.887 132.293C346.884 120.372 347.225 108.158 345.376 96.3604C342.264 76.4749 321.698 72.9701 307.757 84.6536C307.541 84.8558 307.329 85.0612 307.12 85.2705C294.284 98.1641 296.603 120.803 296.607 137.629L296.597 182.082C286.763 182.389 273.132 182.359 263.332 182.074C263.034 166.013 263.283 149.108 263.282 132.987L263.321 50.6678C274.042 50.4529 285.869 50.538 296.577 50.6858C296.585 54.9465 296.568 59.103 296.782 63.3619C308.936 55.2941 314.486 49.587 330.391 47.8328Z" fill="url(#paint2_linear_7012_13)"/>
+<path d="M125.557 50.7048C136.438 50.4006 148.334 50.5821 159.266 50.6635C159.553 67.471 159.117 84.5391 159.299 101.398C159.098 113.158 159.355 124.28 160.962 135.928C163.51 154.393 188.17 160.411 200.511 147.931C203.429 144.958 205.455 141.223 206.358 137.154C208.328 128.57 207.963 110.368 207.964 101.101L208.015 50.6883C218.748 50.4111 230.335 50.596 241.118 50.6579C242.009 56.2019 241.633 75.2905 241.618 82.0026C241.66 102.759 242.291 131.405 236.774 150.624C227.559 178.258 199.135 189.054 172.603 184.771C122.844 176.743 125.503 133.325 125.477 93.4026L125.557 50.7048Z" fill="url(#paint3_linear_7012_13)"/>
+<defs>
+<linearGradient id="paint0_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+<linearGradient id="paint1_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+<linearGradient id="paint2_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+<linearGradient id="paint3_linear_7012_13" x1="0" y1="93.0127" x2="685.269" y2="93.0127" gradientUnits="userSpaceOnUse">
+<stop stop-color="#48B8DC"/>
+<stop offset="1" stop-color="#067EFC"/>
+</linearGradient>
+</defs>
+</svg>
+</div><div style="background:var(--color-primary-700)"><svg class="logo" role="img" aria-label="Fundo" width="686" height="187" viewBox="0 0 686 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M497.986 0.189407C507.601 0.0757822 521.945 -0.223844 531.328 0.295906C532.033 5.94716 531.729 22.6864 531.639 29.1192C531.421 44.3224 532.119 61.125 531.519 76.1123C530.435 77.6577 528.939 79.158 527.6 80.502C517.37 90.7834 508.753 102.251 499.569 113.418C498.74 106.297 497.533 100.327 493.633 94.1472C488.788 86.352 480.988 80.8534 472.021 78.9049C462.493 76.8334 452.979 78.2108 444.496 83.5429C419.285 99.3934 424.411 146.883 455.008 152.902C476.731 156.708 493.621 134.643 505.393 119.782C527.754 91.5447 551.844 61.0118 588.245 51.1827C600.804 47.7919 615.598 46.3414 628.494 48.7452C646.843 52.1382 663.088 62.697 673.64 78.0897C683.851 93.3784 687.545 112.106 683.896 130.128C675.44 172.038 631.49 195.825 591.725 181.275C576.946 175.863 565.666 165.678 557.083 152.677C551.761 143.767 550.22 138.6 547.944 128.756C559.036 115.41 571.408 103.785 586.141 94.5822C580.948 104.028 579.759 112.533 580.929 123.273C581.953 132.731 586.723 141.386 594.174 147.307C609.178 159.071 632.983 155.921 644.03 140.505C650.615 131.602 652.603 120.243 650.964 109.32C647.266 84.723 626.499 76.0384 603.92 79.6467C596.69 80.7604 589.7 83.0738 583.235 86.4912C566.289 95.5609 542.319 120.551 531.046 136.11C532.044 139.751 531.976 177.69 531.193 182.088C521.169 182.347 507.909 182.37 497.964 182.062L497.983 171.255C486.988 178.957 476.266 185.426 462.313 185.992C445.55 186.536 429.256 180.405 417.009 168.945C402.751 155.576 395.694 138.791 395.154 119.34C394.606 99.7084 399.834 80.8688 413.623 66.4575C425.15 54.4118 438.459 47.9854 455.225 47.6254C472.711 47.25 485.54 53.0104 497.975 64.9782C497.72 43.7044 497.84 21.4774 497.986 0.189407Z" fill="#FEFEFE"/>
+<path d="M0.0277519 7.56653C6.07988 7.3899 12.3334 7.41992 18.3904 7.4788C49.6961 7.78255 81.171 7.02504 112.459 7.56092C112.998 15.4112 112.919 32.7276 112.458 40.5598C104.224 40.8797 95.2598 40.7192 86.9655 40.7173C69.4279 40.6505 51.8895 40.676 34.3519 40.7942C34.9631 52.5152 34.8488 67.7885 34.425 79.583C54.6293 79.7143 75.225 79.2763 95.3831 79.6828C95.9003 86.4538 95.5575 97.103 95.5477 104.131L95.502 112.797C76.3538 113.464 53.8571 112.872 34.3688 112.909C34.8806 122.479 34.6695 133.077 34.6721 142.763C34.7205 155.858 34.6894 168.953 34.5788 182.044C27.3094 182.449 7.22775 182.438 0 181.992L0.0277519 7.56653Z" fill="#FEFEFE"/>
+<path d="M330.391 47.8328C331.854 47.655 334.899 47.6261 336.507 47.625C348.256 47.6768 359.521 52.3328 367.876 60.594C383.015 75.7031 379.865 100.294 379.869 120.06L379.846 182.13C369.627 182.355 357.069 182.337 346.914 182.067L346.887 132.293C346.884 120.372 347.225 108.158 345.376 96.3604C342.264 76.4749 321.698 72.9701 307.757 84.6536C307.541 84.8558 307.329 85.0612 307.12 85.2705C294.284 98.1641 296.603 120.803 296.607 137.629L296.597 182.082C286.763 182.389 273.132 182.359 263.332 182.074C263.034 166.013 263.283 149.108 263.282 132.987L263.321 50.6678C274.042 50.4529 285.869 50.538 296.577 50.6858C296.585 54.9465 296.568 59.103 296.782 63.3619C308.936 55.2941 314.486 49.587 330.391 47.8328Z" fill="#FEFEFE"/>
+<path d="M125.557 50.7048C136.438 50.4006 148.334 50.5821 159.266 50.6635C159.553 67.471 159.117 84.5391 159.299 101.398C159.098 113.158 159.355 124.28 160.962 135.928C163.51 154.393 188.17 160.411 200.511 147.931C203.429 144.958 205.455 141.223 206.358 137.154C208.328 128.57 207.963 110.368 207.964 101.101L208.015 50.6883C218.748 50.4111 230.335 50.596 241.118 50.6579C242.009 56.2019 241.633 75.2905 241.618 82.0026C241.66 102.759 242.291 131.405 236.774 150.624C227.559 178.258 199.135 189.054 172.603 184.771C122.844 176.743 125.503 133.325 125.477 93.4026L125.557 50.7048Z" fill="#FEFEFE"/>
+</svg>
+</div><div style="background:var(--color-neutral-900)"><svg class="logo" role="img" aria-label="Fundo" width="686" height="187" viewBox="0 0 686 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M497.986 0.189407C507.601 0.0757822 521.945 -0.223844 531.328 0.295906C532.033 5.94716 531.729 22.6864 531.639 29.1192C531.421 44.3224 532.119 61.125 531.519 76.1123C530.435 77.6577 528.939 79.158 527.6 80.502C517.37 90.7834 508.753 102.251 499.569 113.418C498.74 106.297 497.533 100.327 493.633 94.1472C488.788 86.352 480.988 80.8534 472.021 78.9049C462.493 76.8334 452.979 78.2108 444.496 83.5429C419.285 99.3934 424.411 146.883 455.008 152.902C476.731 156.708 493.621 134.643 505.393 119.782C527.754 91.5447 551.844 61.0118 588.245 51.1827C600.804 47.7919 615.598 46.3414 628.494 48.7452C646.843 52.1382 663.088 62.697 673.64 78.0897C683.851 93.3784 687.545 112.106 683.896 130.128C675.44 172.038 631.49 195.825 591.725 181.275C576.946 175.863 565.666 165.678 557.083 152.677C551.761 143.767 550.22 138.6 547.944 128.756C559.036 115.41 571.408 103.785 586.141 94.5822C580.948 104.028 579.759 112.533 580.929 123.273C581.953 132.731 586.723 141.386 594.174 147.307C609.178 159.071 632.983 155.921 644.03 140.505C650.615 131.602 652.603 120.243 650.964 109.32C647.266 84.723 626.499 76.0384 603.92 79.6467C596.69 80.7604 589.7 83.0738 583.235 86.4912C566.289 95.5609 542.319 120.551 531.046 136.11C532.044 139.751 531.976 177.69 531.193 182.088C521.169 182.347 507.909 182.37 497.964 182.062L497.983 171.255C486.988 178.957 476.266 185.426 462.313 185.992C445.55 186.536 429.256 180.405 417.009 168.945C402.751 155.576 395.694 138.791 395.154 119.34C394.606 99.7084 399.834 80.8688 413.623 66.4575C425.15 54.4118 438.459 47.9854 455.225 47.6254C472.711 47.25 485.54 53.0104 497.975 64.9782C497.72 43.7044 497.84 21.4774 497.986 0.189407Z" fill="#FEFEFE"/>
+<path d="M0.0277519 7.56653C6.07988 7.3899 12.3334 7.41992 18.3904 7.4788C49.6961 7.78255 81.171 7.02504 112.459 7.56092C112.998 15.4112 112.919 32.7276 112.458 40.5598C104.224 40.8797 95.2598 40.7192 86.9655 40.7173C69.4279 40.6505 51.8895 40.676 34.3519 40.7942C34.9631 52.5152 34.8488 67.7885 34.425 79.583C54.6293 79.7143 75.225 79.2763 95.3831 79.6828C95.9003 86.4538 95.5575 97.103 95.5477 104.131L95.502 112.797C76.3538 113.464 53.8571 112.872 34.3688 112.909C34.8806 122.479 34.6695 133.077 34.6721 142.763C34.7205 155.858 34.6894 168.953 34.5788 182.044C27.3094 182.449 7.22775 182.438 0 181.992L0.0277519 7.56653Z" fill="#FEFEFE"/>
+<path d="M330.391 47.8328C331.854 47.655 334.899 47.6261 336.507 47.625C348.256 47.6768 359.521 52.3328 367.876 60.594C383.015 75.7031 379.865 100.294 379.869 120.06L379.846 182.13C369.627 182.355 357.069 182.337 346.914 182.067L346.887 132.293C346.884 120.372 347.225 108.158 345.376 96.3604C342.264 76.4749 321.698 72.9701 307.757 84.6536C307.541 84.8558 307.329 85.0612 307.12 85.2705C294.284 98.1641 296.603 120.803 296.607 137.629L296.597 182.082C286.763 182.389 273.132 182.359 263.332 182.074C263.034 166.013 263.283 149.108 263.282 132.987L263.321 50.6678C274.042 50.4529 285.869 50.538 296.577 50.6858C296.585 54.9465 296.568 59.103 296.782 63.3619C308.936 55.2941 314.486 49.587 330.391 47.8328Z" fill="#FEFEFE"/>
+<path d="M125.557 50.7048C136.438 50.4006 148.334 50.5821 159.266 50.6635C159.553 67.471 159.117 84.5391 159.299 101.398C159.098 113.158 159.355 124.28 160.962 135.928C163.51 154.393 188.17 160.411 200.511 147.931C203.429 144.958 205.455 141.223 206.358 137.154C208.328 128.57 207.963 110.368 207.964 101.101L208.015 50.6883C218.748 50.4111 230.335 50.596 241.118 50.6579C242.009 56.2019 241.633 75.2905 241.618 82.0026C241.66 102.759 242.291 131.405 236.774 150.624C227.559 178.258 199.135 189.054 172.603 184.771C122.844 176.743 125.503 133.325 125.477 93.4026L125.557 50.7048Z" fill="#FEFEFE"/>
+</svg>
+</div></div>
+
+<h2>Primitive palette</h2>
+<p class="lead">W = contrast against white, D = against neutral‑900. #0E90E4 reaches only 3.4:1 on white, so it is the <b>brand</b> colour (logo, large headings, icons, focus); actions and links use primary‑600 (5.2:1).</p>
+<h3>primary</h3><div class="row"><div class="sw"><div class="chip" style="background:var(--color-primary-50)"></div><b>50</b><code>#E7F5FE</code><small>W 1.1 · D 16.7</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-100)"></div><b>100</b><code>#C3E5FB</code><small>W 1.3 · D 14.0</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-200)"></div><b>200</b><code>#93D0F8</code><small>W 1.7 · D 11.1</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-300)"></div><b>300</b><code>#63BCF5</code><small>W 2.1 · D 8.9</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-400)"></div><b>400</b><code>#33A7F2</code><small>W 2.6 · D 7.0</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-500)"></div><b>500</b><code>#0E90E4</code><small>W 3.4 · D 5.4</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-600)"></div><b>600</b><code>#0B72B4</code><small>W 5.1 · D 3.6</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-700)"></div><b>700</b><code>#085384</code><small>W 8.1 · D 2.3</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-800)"></div><b>800</b><code>#053554</code><small>W 12.8 · D 1.4</small></div><div class="sw"><div class="chip" style="background:var(--color-primary-900)"></div><b>900</b><code>#021724</code><small>W 18.3 · D 1.0</small></div></div>
+<h3>neutral</h3><div class="row"><div class="sw"><div class="chip" style="background:var(--color-neutral-0)"></div><b>0</b><code>#FFFFFF</code><small>W 1.0 · D 18.5</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-50)"></div><b>50</b><code>#F0F3F4</code><small>W 1.1 · D 16.6</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-100)"></div><b>100</b><code>#DBE0E3</code><small>W 1.3 · D 13.9</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-200)"></div><b>200</b><code>#BDC7CE</code><small>W 1.7 · D 10.8</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-300)"></div><b>300</b><code>#A0AEB8</code><small>W 2.3 · D 8.2</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-400)"></div><b>400</b><code>#8396A2</code><small>W 3.1 · D 6.0</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-500)"></div><b>500</b><code>#687D8A</code><small>W 4.3 · D 4.3</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-600)"></div><b>600</b><code>#52626D</code><small>W 6.3 · D 2.9</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-700)"></div><b>700</b><code>#3C4850</code><small>W 9.4 · D 2.0</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-800)"></div><b>800</b><code>#262E33</code><small>W 13.8 · D 1.3</small></div><div class="sw"><div class="chip" style="background:var(--color-neutral-900)"></div><b>900</b><code>#101416</code><small>W 18.5 · D 1.0</small></div></div>
+<h3>success</h3><div class="row"><div class="sw"><div class="chip" style="background:var(--color-success-50)"></div><b>50</b><code>#E9FBF1</code><small>W 1.1 · D 17.2</small></div><div class="sw"><div class="chip" style="background:var(--color-success-100)"></div><b>100</b><code>#C9F5DB</code><small>W 1.2 · D 15.5</small></div><div class="sw"><div class="chip" style="background:var(--color-success-200)"></div><b>200</b><code>#9EEDBF</code><small>W 1.4 · D 13.5</small></div><div class="sw"><div class="chip" style="background:var(--color-success-300)"></div><b>300</b><code>#74E4A3</code><small>W 1.6 · D 11.8</small></div><div class="sw"><div class="chip" style="background:var(--color-success-400)"></div><b>400</b><code>#49DC86</code><small>W 1.8 · D 10.5</small></div><div class="sw"><div class="chip" style="background:var(--color-success-500)"></div><b>500</b><code>#27CB6B</code><small>W 2.1 · D 8.7</small></div><div class="sw"><div class="chip" style="background:var(--color-success-600)"></div><b>600</b><code>#1FA055</code><small>W 3.4 · D 5.5</small></div><div class="sw"><div class="chip" style="background:var(--color-success-700)"></div><b>700</b><code>#16763E</code><small>W 5.7 · D 3.3</small></div><div class="sw"><div class="chip" style="background:var(--color-success-800)"></div><b>800</b><code>#0E4B27</code><small>W 10.2 · D 1.8</small></div><div class="sw"><div class="chip" style="background:var(--color-success-900)"></div><b>900</b><code>#062011</code><small>W 17.2 · D 1.1</small></div></div>
+<h3>error</h3><div class="row"><div class="sw"><div class="chip" style="background:var(--color-error-50)"></div><b>50</b><code>#FBE9E9</code><small>W 1.2 · D 15.8</small></div><div class="sw"><div class="chip" style="background:var(--color-error-100)"></div><b>100</b><code>#F6C8C8</code><small>W 1.5 · D 12.4</small></div><div class="sw"><div class="chip" style="background:var(--color-error-200)"></div><b>200</b><code>#EF9C9C</code><small>W 2.1 · D 8.7</small></div><div class="sw"><div class="chip" style="background:var(--color-error-300)"></div><b>300</b><code>#E87070</code><small>W 3.0 · D 6.2</small></div><div class="sw"><div class="chip" style="background:var(--color-error-400)"></div><b>400</b><code>#E14444</code><small>W 4.1 · D 4.5</small></div><div class="sw"><div class="chip" style="background:var(--color-error-500)"></div><b>500</b><code>#D02222</code><small>W 5.3 · D 3.5</small></div><div class="sw"><div class="chip" style="background:var(--color-error-600)"></div><b>600</b><code>#A41B1B</code><small>W 7.6 · D 2.4</small></div><div class="sw"><div class="chip" style="background:var(--color-error-700)"></div><b>700</b><code>#781414</code><small>W 11.0 · D 1.7</small></div><div class="sw"><div class="chip" style="background:var(--color-error-800)"></div><b>800</b><code>#4D0C0C</code><small>W 15.3 · D 1.2</small></div><div class="sw"><div class="chip" style="background:var(--color-error-900)"></div><b>900</b><code>#210505</code><small>W 19.3 · D 1.0</small></div></div>
+<h3>warning</h3><div class="row"><div class="sw"><div class="chip" style="background:var(--color-warning-50)"></div><b>50</b><code>#FEF5E6</code><small>W 1.1 · D 17.1</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-100)"></div><b>100</b><code>#FCE7C2</code><small>W 1.2 · D 15.3</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-200)"></div><b>200</b><code>#FAD491</code><small>W 1.4 · D 13.1</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-300)"></div><b>300</b><code>#F8C060</code><small>W 1.7 · D 11.2</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-400)"></div><b>400</b><code>#F6AD2F</code><small>W 1.9 · D 9.6</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-500)"></div><b>500</b><code>#E8970A</code><small>W 2.4 · D 7.8</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-600)"></div><b>600</b><code>#B77708</code><small>W 3.7 · D 5.0</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-700)"></div><b>700</b><code>#865706</code><small>W 6.2 · D 3.0</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-800)"></div><b>800</b><code>#553704</code><small>W 10.9 · D 1.7</small></div><div class="sw"><div class="chip" style="background:var(--color-warning-900)"></div><b>900</b><code>#241802</code><small>W 17.4 · D 1.1</small></div></div>
+
+<h2>Semantic tokens</h2>
+<div class="tablewrap"><table><thead><tr><th>Semantic token</th><th>Light</th><th>Dark</th></tr></thead><tbody><tr><td><code>--surface-page</code></td><td><span class="dot" style="background:#F0F3F4"></span>neutral-50</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--surface-default</code></td><td><span class="dot" style="background:#FFFFFF"></span>neutral-0</td><td><span class="dot" style="background:#262E33"></span>neutral-800</td></tr><tr><td><code>--surface-sunken</code></td><td><span class="dot" style="background:#DBE0E3"></span>neutral-100</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--surface-raised</code></td><td><span class="dot" style="background:#FFFFFF"></span>neutral-0</td><td><span class="dot" style="background:#3C4850"></span>neutral-700</td></tr><tr><td><code>--surface-inverse</code></td><td><span class="dot" style="background:#101416"></span>neutral-900</td><td><span class="dot" style="background:#F0F3F4"></span>neutral-50</td></tr><tr><td><code>--text-primary</code></td><td><span class="dot" style="background:#101416"></span>neutral-900</td><td><span class="dot" style="background:#F0F3F4"></span>neutral-50</td></tr><tr><td><code>--text-secondary</code></td><td><span class="dot" style="background:#3C4850"></span>neutral-700</td><td><span class="dot" style="background:#BDC7CE"></span>neutral-200</td></tr><tr><td><code>--text-tertiary</code></td><td><span class="dot" style="background:#52626D"></span>neutral-600</td><td><span class="dot" style="background:#A0AEB8"></span>neutral-300</td></tr><tr><td><code>--text-disabled</code></td><td><span class="dot" style="background:#8396A2"></span>neutral-400</td><td><span class="dot" style="background:#687D8A"></span>neutral-500</td></tr><tr><td><code>--text-inverse</code></td><td><span class="dot" style="background:#FFFFFF"></span>neutral-0</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--text-link</code></td><td><span class="dot" style="background:#0B72B4"></span>primary-600</td><td><span class="dot" style="background:#63BCF5"></span>primary-300</td></tr><tr><td><code>--border-default</code></td><td><span class="dot" style="background:#BDC7CE"></span>neutral-200</td><td><span class="dot" style="background:#3C4850"></span>neutral-700</td></tr><tr><td><code>--border-strong</code></td><td><span class="dot" style="background:#8396A2"></span>neutral-400</td><td><span class="dot" style="background:#8396A2"></span>neutral-400</td></tr><tr><td><code>--border-focus</code></td><td><span class="dot" style="background:#0E90E4"></span>primary-500</td><td><span class="dot" style="background:#63BCF5"></span>primary-300</td></tr><tr><td><code>--brand-primary</code></td><td><span class="dot" style="background:#0E90E4"></span>primary-500</td><td><span class="dot" style="background:#33A7F2"></span>primary-400</td></tr><tr><td><code>--action-primary</code></td><td><span class="dot" style="background:#0B72B4"></span>primary-600</td><td><span class="dot" style="background:#33A7F2"></span>primary-400</td></tr><tr><td><code>--action-primary-hover</code></td><td><span class="dot" style="background:#085384"></span>primary-700</td><td><span class="dot" style="background:#63BCF5"></span>primary-300</td></tr><tr><td><code>--action-primary-pressed</code></td><td><span class="dot" style="background:#053554"></span>primary-800</td><td><span class="dot" style="background:#93D0F8"></span>primary-200</td></tr><tr><td><code>--on-action-primary</code></td><td><span class="dot" style="background:#FFFFFF"></span>neutral-0</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--action-disabled</code></td><td><span class="dot" style="background:#DBE0E3"></span>neutral-100</td><td><span class="dot" style="background:#3C4850"></span>neutral-700</td></tr><tr><td><code>--on-action-disabled</code></td><td><span class="dot" style="background:#8396A2"></span>neutral-400</td><td><span class="dot" style="background:#8396A2"></span>neutral-400</td></tr><tr><td><code>--primary-subtle</code></td><td><span class="dot" style="background:#E7F5FE"></span>primary-50</td><td><span class="dot" style="background:#021724"></span>primary-900</td></tr><tr><td><code>--on-primary-subtle</code></td><td><span class="dot" style="background:#053554"></span>primary-800</td><td><span class="dot" style="background:#C3E5FB"></span>primary-100</td></tr><tr><td><code>--success-solid</code></td><td><span class="dot" style="background:#16763E"></span>success-700</td><td><span class="dot" style="background:#49DC86"></span>success-400</td></tr><tr><td><code>--on-success-solid</code></td><td><span class="dot" style="background:#FFFFFF"></span>neutral-0</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--success-text</code></td><td><span class="dot" style="background:#16763E"></span>success-700</td><td><span class="dot" style="background:#74E4A3"></span>success-300</td></tr><tr><td><code>--success-subtle</code></td><td><span class="dot" style="background:#E9FBF1"></span>success-50</td><td><span class="dot" style="background:#062011"></span>success-900</td></tr><tr><td><code>--on-success-subtle</code></td><td><span class="dot" style="background:#0E4B27"></span>success-800</td><td><span class="dot" style="background:#C9F5DB"></span>success-100</td></tr><tr><td><code>--success-border</code></td><td><span class="dot" style="background:#74E4A3"></span>success-300</td><td><span class="dot" style="background:#16763E"></span>success-700</td></tr><tr><td><code>--error-solid</code></td><td><span class="dot" style="background:#A41B1B"></span>error-600</td><td><span class="dot" style="background:#E87070"></span>error-300</td></tr><tr><td><code>--on-error-solid</code></td><td><span class="dot" style="background:#FFFFFF"></span>neutral-0</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--error-text</code></td><td><span class="dot" style="background:#A41B1B"></span>error-600</td><td><span class="dot" style="background:#E87070"></span>error-300</td></tr><tr><td><code>--error-subtle</code></td><td><span class="dot" style="background:#FBE9E9"></span>error-50</td><td><span class="dot" style="background:#210505"></span>error-900</td></tr><tr><td><code>--on-error-subtle</code></td><td><span class="dot" style="background:#4D0C0C"></span>error-800</td><td><span class="dot" style="background:#F6C8C8"></span>error-100</td></tr><tr><td><code>--error-border</code></td><td><span class="dot" style="background:#E87070"></span>error-300</td><td><span class="dot" style="background:#781414"></span>error-700</td></tr><tr><td><code>--warning-solid</code></td><td><span class="dot" style="background:#F6AD2F"></span>warning-400</td><td><span class="dot" style="background:#F6AD2F"></span>warning-400</td></tr><tr><td><code>--on-warning-solid</code></td><td><span class="dot" style="background:#101416"></span>neutral-900</td><td><span class="dot" style="background:#101416"></span>neutral-900</td></tr><tr><td><code>--warning-text</code></td><td><span class="dot" style="background:#865706"></span>warning-700</td><td><span class="dot" style="background:#F8C060"></span>warning-300</td></tr><tr><td><code>--warning-subtle</code></td><td><span class="dot" style="background:#FEF5E6"></span>warning-50</td><td><span class="dot" style="background:#241802"></span>warning-900</td></tr><tr><td><code>--on-warning-subtle</code></td><td><span class="dot" style="background:#553704"></span>warning-800</td><td><span class="dot" style="background:#FCE7C2"></span>warning-100</td></tr><tr><td><code>--warning-border</code></td><td><span class="dot" style="background:#F8C060"></span>warning-300</td><td><span class="dot" style="background:#865706"></span>warning-700</td></tr></tbody></table></div>
+
+<h2>Type scale</h2>
+<p class="lead">rem‑based (1rem = 16px), mobile‑first: phone sizes by default, desktop sizes from 48rem. <code>amount</code> uses tabular numbers so figures line up.</p>
+<div class="ty"><span class="meta">display · Outfit 700 · 3rem / 2.5rem mobile</span><div style="font-family:var(--type-display-family);font-size:var(--type-display-size);line-height:var(--type-display-line-height);font-weight:var(--type-display-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">heading-1 · Outfit 700 · 2.25rem / 2rem mobile</span><div style="font-family:var(--type-heading-1-family);font-size:var(--type-heading-1-size);line-height:var(--type-heading-1-line-height);font-weight:var(--type-heading-1-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">heading-2 · Outfit 700 · 1.75rem / 1.5rem mobile</span><div style="font-family:var(--type-heading-2-family);font-size:var(--type-heading-2-size);line-height:var(--type-heading-2-line-height);font-weight:var(--type-heading-2-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">heading-3 · Outfit 600 · 1.375rem / 1.25rem mobile</span><div style="font-family:var(--type-heading-3-family);font-size:var(--type-heading-3-size);line-height:var(--type-heading-3-line-height);font-weight:var(--type-heading-3-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">heading-4 · Outfit 600 · 1.125rem / 1.125rem mobile</span><div style="font-family:var(--type-heading-4-family);font-size:var(--type-heading-4-size);line-height:var(--type-heading-4-line-height);font-weight:var(--type-heading-4-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">amount · Outfit 600 · 2rem / 1.75rem mobile</span><div style="font-family:var(--type-amount-family);font-size:var(--type-amount-size);line-height:var(--type-amount-line-height);font-weight:var(--type-amount-weight);font-variant-numeric:tabular-nums">$2,600.00</div></div><div class="ty"><span class="meta">body-lg · Roboto 400 · 1.125rem / 1.125rem mobile</span><div style="font-family:var(--type-body-lg-family);font-size:var(--type-body-lg-size);line-height:var(--type-body-lg-line-height);font-weight:var(--type-body-lg-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">body · Roboto 400 · 1rem / 1rem mobile</span><div style="font-family:var(--type-body-family);font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:var(--type-body-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">body-sm · Roboto 400 · 0.875rem / 0.875rem mobile</span><div style="font-family:var(--type-body-sm-family);font-size:var(--type-body-sm-size);line-height:var(--type-body-sm-line-height);font-weight:var(--type-body-sm-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">label · Roboto 500 · 0.875rem / 0.875rem mobile</span><div style="font-family:var(--type-label-family);font-size:var(--type-label-size);line-height:var(--type-label-line-height);font-weight:var(--type-label-weight)">See what you’d pay back before you apply</div></div><div class="ty"><span class="meta">caption · Roboto 400 · 0.75rem / 0.75rem mobile</span><div style="font-family:var(--type-caption-family);font-size:var(--type-caption-size);line-height:var(--type-caption-line-height);font-weight:var(--type-caption-weight)">See what you’d pay back before you apply</div></div>
+
+<h2>Spacing and radius</h2>
+<div class="spacer"><div style="width:var(--space-1);height:var(--space-1)"></div><span>1</span><div style="width:var(--space-2);height:var(--space-2)"></div><span>2</span><div style="width:var(--space-3);height:var(--space-3)"></div><span>3</span><div style="width:var(--space-4);height:var(--space-4)"></div><span>4</span><div style="width:var(--space-5);height:var(--space-5)"></div><span>5</span><div style="width:var(--space-6);height:var(--space-6)"></div><span>6</span><div style="width:var(--space-8);height:var(--space-8)"></div><span>8</span><div style="width:var(--space-10);height:var(--space-10)"></div><span>10</span><div style="width:var(--space-12);height:var(--space-12)"></div><span>12</span><div style="width:var(--space-16);height:var(--space-16)"></div><span>16</span></div>
+<div class="radii" style="margin-top:var(--space-4)"><div style="border-radius:var(--radius-none)">none</div><div style="border-radius:var(--radius-sm)">sm</div><div style="border-radius:var(--radius-md)">md</div><div style="border-radius:var(--radius-lg)">lg</div><div style="border-radius:var(--radius-xl)">xl</div><div style="border-radius:var(--radius-full)">full</div></div>
+
+<h2>Tokens in use</h2>
+<div class="grid2">
+<div class="card"><h3 style="margin-top:0">Actions</h3><div class="btns"><button class="btn btn-primary">Check if I can apply</button><button class="btn btn-secondary">Change</button><button class="btn btn-primary" disabled aria-describedby="h1">Continue</button><span class="help" id="h1">Answer all three to continue</span></div>
+<div style="margin-top:var(--space-5)"><label for="em">Where should we send your quote?</label><input id="em" value="name@example" aria-invalid="true" aria-describedby="e1"><div class="err" id="e1">Enter a valid email, like name@example.com.</div></div></div>
+<div class="card quote"><h3 style="margin-top:0">Quote card</h3><dl><dt>You get</dt><dd class="big">$2,000</dd><dt>You pay back</dt><dd class="big">$2,600</dd></dl><hr><dl><dt>16 weekly payments</dt><dd>$162.50</dd><dt>Payment day</dt><dd>Tuesday</dd><dt>Cost of this advance</dt><dd>$600.00</dd></dl><p class="fine">Example based on typical pricing. Your real offer depends on your deposits. Not a loan. Not available in CA or NY.</p></div>
+<div class="card"><h3 style="margin-top:0">Feedback</h3><div class="alert a-success">Good news — you can apply.</div><div class="alert a-warning">Still working — slow connection. Your answers are saved.</div><div class="alert a-error">We couldn’t reach Fundo. Check your connection and try again.</div>
+<div class="badges"><span class="badge" style="background:var(--success-solid);color:var(--on-success-solid)">Funded</span><span class="badge" style="background:var(--warning-solid);color:var(--on-warning-solid)">Payment due</span><span class="badge" style="background:var(--error-solid);color:var(--on-error-solid)">Payment failed</span><span class="badge" style="background:var(--primary-subtle);color:var(--on-primary-subtle)">In review</span></div></div>
+</div>
+</main>
+<script>
+const b=document.getElementById('theme'),r=document.documentElement;
+function cur(){const t=r.getAttribute('data-theme');return t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+function paint(){const d=cur()==='dark';b.textContent=d?'Light mode':'Dark mode';b.setAttribute('aria-pressed',String(d))}
+b.addEventListener('click',()=>{r.setAttribute('data-theme',cur()==='dark'?'light':'dark');paint()});paint();
+</script></body></html>
