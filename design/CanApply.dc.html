@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>You can apply — Fundo</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/bc185d4540cd404835b035ea6aca30a0">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width: 100%; max-width: 360px; min-height: 1220px; box-sizing: border-box; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-text); font-size: 1rem; line-height: 1.5; display: flex; flex-direction: column">
+  <header style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: var(--surface-default); border-bottom: 1px solid var(--border-default)">
+    <a href="Eligibility.dc.html" aria-label="Back to the questions" style="width: 44px; height: 44px; display: flex; align-items: center; color: var(--text-primary)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <img src="{{logo}}" alt="Fundo" style="height: 22px; width: auto">
+    <a href="#" style="min-width: 44px; height: 44px; display: flex; align-items: center; justify-content: flex-end; font-weight: 500; font-size: 0.875rem; text-decoration: none; color: var(--text-link)">Help</a>
+  </header>
+
+  <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--text-tertiary); font-weight: 500">Step 2 of 7 · Can you apply? · Done</p>
+      <div role="progressbar" aria-label="Application progress" aria-valuemin="1" aria-valuemax="7" aria-valuenow="2" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 12px; background: var(--success-subtle); color: var(--on-success-subtle); border: 1px solid var(--success-border); border-radius: 1rem; padding: 12px 16px">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg>
+      <span style="font-weight: 500">You meet the minimums for Fundo.</span>
+    </div>
+
+    <h1 style="margin: 0; font-family: var(--font-heading); font-size: 2rem; line-height: 1.15; font-weight: 700">Good news — <span style="color: var(--brand-primary)">you can apply</span></h1>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 1rem; padding: 12px 16px">
+      <div style="display: flex; flex-direction: column">
+        <span style="font-size: 0.75rem; color: var(--text-tertiary)">Your quote</span>
+        <span style="font-weight: 500; font-variant-numeric: tabular-nums">$2,000 · 16 weekly payments of $162.50</span>
+      </div>
+      <a href="Main.dc.html" style="font-size: 0.875rem; font-weight: 500; min-height: 44px; display: flex; align-items: center; color: var(--text-link)">Change</a>
+    </div>
+
+    <section aria-labelledby="next-title" style="background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 1rem; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+      <h2 id="next-title" style="margin: 0; font-family: var(--font-heading); font-size: 1.25rem; line-height: 1.3; font-weight: 600">What’s next <span style="font-family: var(--font-text); font-size: 0.875rem; font-weight: 400; color: var(--text-tertiary)">· about 4 minutes</span></h2>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="5">
+          <li style="display: flex; gap: 12px; align-items: flex-start">
+            <span aria-hidden="true" style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 9999px; background: var(--primary-subtle); color: var(--on-primary-subtle); display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 500">{{s.n}}</span>
+            <div style="display: flex; flex-direction: column">
+              <span style="font-weight: 500">{{s.title}}</span>
+              <span style="font-size: 0.875rem; color: var(--text-secondary)">{{s.body}}</span>
+            </div>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label for="email" style="font-size: 0.875rem; font-weight: 500">Where should we send your quote? <span style="font-weight: 400; color: var(--text-tertiary)">(required)</span></label>
+      <input id="email" required aria-required="true" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-describedby="email-help" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+      <p id="email-help" style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">We’ll save your progress. If you stop, the link in this email takes you back to where you were.</p>
+    </div>
+
+    <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 0.875rem; color: var(--text-secondary); min-height: 44px; cursor: pointer">
+      <input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--action-primary); flex-shrink: 0">
+      <span>Send me tips and offers from Fundo by email (optional). You can unsubscribe anytime.</span>
+    </label>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto">
+      <a href="AboutYou.dc.html" style="min-height: 52px; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); display: flex; align-items: center; justify-content: center; font-weight: 500; text-decoration: none">Save my quote and continue</a>
+      <p style="margin: 0; text-align: center; font-size: 0.75rem; color: var(--text-tertiary)">By continuing, you agree to our <a href="#" style="color: var(--text-link)">Terms</a> and <a href="#" style="color: var(--text-link)">Privacy Policy</a>.</p>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":360,"height":1220}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const theme = this.props.theme ?? 'light';
+    return {
+      theme,
+      logo: theme === 'dark' ? '/_blob/cdc516ae343798b86ac2ec7b0c5ab880' : '/_blob/b05416141ebb803767d51d5df875965f',
+      steps: [
+        { n: 3, title: 'About you', body: 'Name, phone and date of birth.' },
+        { n: 4, title: 'Your business', body: 'What you do and how you get paid.' },
+        { n: 5, title: 'Identity check', body: 'Your address and SSN. Checking it doesn’t affect your credit score.' },
+        { n: 6, title: 'Connect your bank', body: 'Read-only, through Plaid. We never see your login.' },
+        { n: 7, title: 'See your offer', body: 'Nothing is final until you accept it.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

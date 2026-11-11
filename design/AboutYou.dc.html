@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Step 3 of 7, About you — Fundo</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/bc185d4540cd404835b035ea6aca30a0">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="light" style="width: 100%; max-width: 360px; box-sizing: border-box; min-height: 1180px; position: relative; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-text); font-size: 1rem; line-height: 1.5; display: flex; flex-direction: column">
+  <header style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: var(--surface-default); border-bottom: 1px solid var(--border-default)">
+    <a href="CanApply.dc.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; color: var(--text-primary)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <img src="/_blob/b05416141ebb803767d51d5df875965f" alt="Fundo" style="height: 22px; width: auto">
+    <button type="button" onClick="{{openLater}}" style="min-height: 44px; padding: 0; border: 0; background: none; font: 500 0.875rem var(--font-text); color: var(--text-link); cursor: pointer">Finish later</button>
+  </header>
+
+  <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; justify-content: space-between; gap: 8px">
+        <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--text-tertiary); font-weight: 500">Step 3 of 7 · About you</p>
+        <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--success-text); font-weight: 500">Progress saved</p>
+      </div>
+      <div role="progressbar" aria-label="Application progress" aria-valuemin="1" aria-valuemax="7" aria-valuenow="3" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+      </div>
+    </div>
+
+    <div role="status" style="display: flex; gap: 10px; align-items: flex-start; background: var(--success-subtle); color: var(--on-success-subtle); border: 1px solid var(--success-border); border-radius: 0.5rem; padding: 12px; font-size: 0.875rem">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+      <span><strong>Quote saved.</strong> We sent it to name@example.com. If you stop now, the link in that email brings you back here.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-family: var(--font-heading); font-size: 2rem; line-height: 1.15; font-weight: 700">A bit <span style="color: var(--brand-primary)">about you</span></h1>
+      <p style="margin: 0; color: var(--text-secondary)">Use your legal name, as it appears on your ID. It has to match your bank account.</p>
+      <p style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">All fields are required unless marked optional.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+      <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+        <label for="fn" style="font-size: 0.875rem; font-weight: 500">First name</label>
+        <input id="fn" required aria-required="true" autocomplete="given-name" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+        <label for="ln" style="font-size: 0.875rem; font-weight: 500">Last name</label>
+        <input id="ln" required aria-required="true" autocomplete="family-name" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label for="dob" style="font-size: 0.875rem; font-weight: 500">Date of birth</label>
+      <div style="position: relative">
+        <input id="dob" required aria-required="true" inputmode="numeric" autocomplete="bday" placeholder="MM / DD / YYYY" value="{{dobText}}" onInput="{{typeDob}}" aria-describedby="dob-help" style="min-height: 48px; width: 100%; box-sizing: border-box; padding: 0 52px 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem; font-variant-numeric: tabular-nums">
+        <button type="button" aria-label="Choose date from calendar" aria-expanded="{{calOpenStr}}" onClick="{{toggleCal}}" style="position: absolute; right: 4px; top: 2px; width: 44px; height: 44px; border: 0; background: none; color: var(--text-link); display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+        </button>
+      </div>
+      <sc-if value="{{calOpen}}" hint-placeholder-val="{{false}}">
+        <div role="dialog" aria-label="Choose your date of birth" style="background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 1rem; padding: 12px; box-shadow: 0 8px 24px rgba(16, 20, 22, 0.12); display: flex; flex-direction: column; gap: 8px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+            <button type="button" aria-label="Previous month" onClick="{{prevMonth}}" style="width: 44px; height: 44px; border: 0; border-radius: 9999px; background: none; color: var(--text-primary); display: flex; align-items: center; justify-content: center; cursor: pointer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+            </button>
+            <div style="display: flex; align-items: center; gap: 8px">
+              <span style="font-weight: 500">{{monthName}}</span>
+              <label for="cal-year" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Year</label>
+              <input id="cal-year" type="number" inputmode="numeric" min="1920" max="2008" value="{{viewYear}}" onInput="{{typeYear}}" style="width: 80px; min-height: 40px; box-sizing: border-box; padding: 0 8px; font: 500 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem; text-align: center">
+            </div>
+            <button type="button" aria-label="Next month" onClick="{{nextMonth}}" style="width: 44px; height: 44px; border: 0; border-radius: 9999px; background: none; color: var(--text-primary); display: flex; align-items: center; justify-content: center; cursor: pointer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+            </button>
+          </div>
+          <div aria-hidden="true" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); text-align: center; font-size: 0.75rem; color: var(--text-tertiary)">
+            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+          </div>
+          <div role="grid" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px">
+            <sc-for list="{{cells}}" as="c" hint-placeholder-count="35">
+              <sc-if value="{{c.blank}}" hint-placeholder-val="{{false}}"><span></span></sc-if>
+              <sc-if value="{{c.day}}" hint-placeholder-val="{{true}}">
+                <button type="button" aria-label="{{c.label}}" aria-pressed="{{c.on}}" onClick="{{c.pick}}" style="{{c.style}}">{{c.n}}</button>
+              </sc-if>
+            </sc-for>
+          </div>
+          <p style="margin: 0; font-size: 0.75rem; color: var(--text-tertiary); text-align: center">Type the year to jump to it.</p>
+        </div>
+      </sc-if>
+      <p id="dob-help" style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">You need to be 18 or older to apply.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label for="tel" style="font-size: 0.875rem; font-weight: 500">Mobile number</label>
+      <div style="display: flex; gap: 8px">
+        <button type="button" aria-label="{{ccLabel}}" aria-expanded="{{ccOpenStr}}" onClick="{{toggleCc}}" style="flex-shrink: 0; min-height: 48px; display: flex; align-items: center; gap: 6px; padding: 0 10px 0 12px; font: 500 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem; cursor: pointer">
+          <span>{{cc.code}}</span><span style="color: var(--text-secondary)">{{cc.dial}}</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <input id="tel" required aria-required="true" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(305) 555-0123" aria-describedby="tel-help" style="flex: 1; min-width: 0; min-height: 48px; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+      </div>
+      <sc-if value="{{ccOpen}}" hint-placeholder-val="{{false}}">
+        <div style="background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 0.5rem; box-shadow: 0 8px 24px rgba(16, 20, 22, 0.12); padding: 8px; display: flex; flex-direction: column; gap: 4px">
+          <label for="cc-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search country</label>
+          <input id="cc-search" role="combobox" aria-controls="cc-list" aria-expanded="true" autocomplete="off" placeholder="Search country or code" value="{{ccQuery}}" onInput="{{typeCc}}" style="min-height: 44px; width: 100%; box-sizing: border-box; padding: 0 12px; font: 1rem var(--font-text); color: var(--text-primary); background: var(--surface-default); border: 1px solid var(--border-strong); border-radius: 0.5rem">
+          <ul id="cc-list" role="listbox" aria-label="Countries" style="margin: 0; padding: 0; list-style: none; max-height: 200px; overflow-y: auto">
+            <sc-for list="{{ccMatches}}" as="k" hint-placeholder-count="4">
+              <li role="option" aria-selected="false" onClick="{{k.pick}}" style="min-height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; cursor: pointer">
+                <span>{{k.name}}</span><span style="color: var(--text-secondary); font-variant-numeric: tabular-nums">{{k.dial}}</span>
+              </li>
+            </sc-for>
+          </ul>
+        </div>
+      </sc-if>
+      <div id="tel-help" style="display: flex; gap: 8px; align-items: flex-start; background: var(--primary-subtle); color: var(--on-primary-subtle); border-radius: 0.5rem; padding: 10px 12px; font-size: 0.875rem">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
+        <span>We’ll text you a one-time code and updates about this application only. No sales calls.</span>
+      </div>
+    </div>
+
+    <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 0.875rem; color: var(--text-secondary); min-height: 44px; cursor: pointer">
+      <input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--action-primary); flex-shrink: 0">
+      <span>Also text me offers from Fundo (optional). Msg &amp; data rates may apply. Reply STOP to opt out. <a href="#" style="color: var(--text-link)">Messaging terms</a></span>
+    </label>
+
+    <a href="Business.dc.html" style="margin-top: auto; min-height: 52px; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); display: flex; align-items: center; justify-content: center; font-weight: 500; text-decoration: none">Continue</a>
+  </main>
+
+  <sc-if value="{{laterOpen}}" hint-placeholder-val="{{false}}">
+    <div style="position: absolute; inset: 0; background: rgba(16, 20, 22, 0.55); display: flex; align-items: flex-end">
+      <div role="dialog" aria-modal="true" aria-labelledby="later-title" style="width: 100%; box-sizing: border-box; background: var(--surface-default); border-radius: 1.5rem 1.5rem 0 0; padding: 24px 16px; display: flex; flex-direction: column; gap: 12px">
+        <span aria-hidden="true" style="align-self: center; width: 40px; height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <h2 id="later-title" style="margin: 0; font-family: var(--font-heading); font-size: 1.5rem; line-height: 1.2; font-weight: 700">Your progress is saved</h2>
+        <p style="margin: 0; color: var(--text-secondary)">We sent a link to <strong style="color: var(--text-primary)">name@example.com</strong>. Open it any time in the next 30 days to continue from <strong style="color: var(--text-primary)">Step 3 of 7 · About you</strong>. Your quote stays the same.</p>
+        <p style="margin: 0; font-size: 0.875rem; color: var(--text-tertiary)">Can’t find it? Check your spam folder or <a href="#" style="color: var(--text-link)">send the link again</a>.</p>
+        <button type="button" onClick="{{closeLater}}" style="min-height: 52px; border: 0; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); font: 500 1rem var(--font-text); cursor: pointer; margin-top: 8px">Keep going</button>
+        <a href="Returning.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-weight: 500; color: var(--text-link)">Close and finish later</a>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":1180}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { calOpen: false, vm: 2, vy: 1990, dob: null, dobText: '', cc: 'US', ccOpen: false, ccQuery: '', laterOpen: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const CC = [['US','United States','+1'],['PR','Puerto Rico','+1'],['CA','Canada','+1'],['MX','Mexico','+52'],['DO','Dominican Republic','+1'],['CO','Colombia','+57'],['VE','Venezuela','+58'],['GT','Guatemala','+502'],['SV','El Salvador','+503'],['HN','Honduras','+504'],['CU','Cuba','+53'],['HT','Haiti','+509'],['BR','Brazil','+55'],['PH','Philippines','+63'],['IN','India','+91'],['GB','United Kingdom','+44']];
+    const pad = (n) => String(n).padStart(2, '0');
+    const first = new Date(s.vy, s.vm, 1).getDay();
+    const days = new Date(s.vy, s.vm + 1, 0).getDate();
+    const cells = [];
+    for (let i = 0; i < first; i++) cells.push({ blank: true, day: false });
+    for (let d = 1; d <= days; d++) {
+      const on = !!(s.dob && s.dob.y === s.vy && s.dob.m === s.vm && s.dob.d === d);
+      cells.push({ blank: false, day: true, n: d, on: String(on), label: MONTHS[s.vm] + ' ' + d + ', ' + s.vy,
+        style: 'width: 100%; aspect-ratio: 1; min-height: 40px; border: 0; border-radius: 9999px; font: 1rem var(--font-text); cursor: pointer; ' +
+          (on ? 'background: var(--action-primary); color: var(--on-action-primary);' : 'background: none; color: var(--text-primary);'),
+        pick: () => this.setState({ dob: { y: s.vy, m: s.vm, d }, dobText: pad(s.vm + 1) + ' / ' + pad(d) + ' / ' + s.vy, calOpen: false }) });
+    }
+    const cur = CC.find((x) => x[0] === s.cc);
+    const q = s.ccQuery.trim().toLowerCase();
+    const ccMatches = CC.filter((x) => !q || x[1].toLowerCase().includes(q) || x[2].includes(q) || x[0].toLowerCase() === q);
+    return {
+      calOpen: s.calOpen, calOpenStr: String(s.calOpen),
+      toggleCal: () => this.setState({ calOpen: !s.calOpen }),
+      monthName: MONTHS[s.vm], viewYear: s.vy,
+      prevMonth: () => this.setState(s.vm === 0 ? { vm: 11, vy: s.vy - 1 } : { vm: s.vm - 1 }),
+      nextMonth: () => this.setState(s.vm === 11 ? { vm: 0, vy: s.vy + 1 } : { vm: s.vm + 1 }),
+      typeYear: (e) => { const y = parseInt(e.target.value, 10); if (y >= 1920 && y <= 2008) this.setState({ vy: y }); },
+      cells,
+      dobText: s.dobText,
+      typeDob: (e) => this.setState({ dobText: e.target.value }),
+      cc: { code: cur[0], dial: cur[2] },
+      ccLabel: 'Country code: ' + cur[1] + ' ' + cur[2] + '. Change',
+      ccOpen: s.ccOpen, ccOpenStr: String(s.ccOpen),
+      toggleCc: () => this.setState({ ccOpen: !s.ccOpen, ccQuery: '' }),
+      ccQuery: s.ccQuery,
+      typeCc: (e) => this.setState({ ccQuery: e.target.value }),
+      ccMatches: ccMatches.map((x) => ({ name: x[1], dial: x[2], pick: () => this.setState({ cc: x[0], ccOpen: false }) })),
+      laterOpen: s.laterOpen,
+      openLater: () => this.setState({ laterOpen: true }),
+      closeLater: () => this.setState({ laterOpen: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>

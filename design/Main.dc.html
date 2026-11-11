@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Step 1 of 7, Your numbers — Fundo</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/bc185d4540cd404835b035ea6aca30a0">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width: 100%; max-width: 360px; min-height: 1180px; position: relative; box-sizing: border-box; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-text); font-size: 1rem; line-height: 1.5; display: flex; flex-direction: column">
+  <header style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: var(--surface-default); border-bottom: 1px solid var(--border-default)">
+    <span style="width: 44px"></span>
+    <img src="{{logo}}" alt="Fundo" style="height: 22px; width: auto">
+    <a href="#" style="min-width: 44px; height: 44px; display: flex; align-items: center; justify-content: flex-end; font-weight: 500; font-size: 0.875rem; text-decoration: none; color: var(--text-link)">Help</a>
+  </header>
+
+  <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <p style="margin: 0; font-size: 0.75rem; line-height: 1.35; color: var(--text-tertiary); font-weight: 500">Step 1 of 7 · Your numbers</p>
+      <div role="progressbar" aria-label="Application progress" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="height: 4px; border-radius: 9999px; background: var(--brand-primary)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <span style="height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-family: var(--font-heading); font-size: 2rem; line-height: 1.15; font-weight: 700">See what you’d pay back — <span style="color: var(--brand-primary)">before you apply</span></h1>
+      <p style="margin: 0; color: var(--text-secondary)">Pick an amount and a schedule. No personal details yet.</p>
+    </div>
+
+    <section aria-label="Choose your advance" style="background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 1rem; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <span id="amt-label" style="font-size: 0.875rem; font-weight: 500">How much do you need?</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+          <button type="button" aria-label="Decrease amount by $100" onClick="{{dec}}" disabled="{{atMin}}" style="width: 48px; height: 48px; border-radius: 9999px; border: 1px solid var(--border-strong); background: var(--surface-default); color: var(--text-primary); display: flex; align-items: center; justify-content: center; cursor: pointer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg>
+          </button>
+          <output role="spinbutton" aria-labelledby="amt-label" aria-valuemin="500" aria-valuemax="10000" aria-valuenow="{{amount}}" aria-valuetext="{{amountSpoken}}" style="font-family: var(--font-heading); font-size: 2.25rem; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums">{{amountText}}</output>
+          <button type="button" aria-label="Increase amount by $100" onClick="{{inc}}" disabled="{{atMax}}" style="width: 48px; height: 48px; border-radius: 9999px; border: 1px solid var(--border-strong); background: var(--surface-default); color: var(--text-primary); display: flex; align-items: center; justify-content: center; cursor: pointer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+        </div>
+        <p style="margin: 0; text-align: center; font-size: 0.875rem; color: var(--text-tertiary)">Between $500 and $10,000</p>
+      </div>
+
+      <div role="radiogroup" aria-labelledby="term-label" style="display: flex; flex-direction: column; gap: 8px">
+        <span id="term-label" style="font-size: 0.875rem; font-weight: 500">Pay it back over</span>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+          <sc-for list="{{terms}}" as="t" hint-placeholder-count="3">
+            <button type="button" role="radio" aria-checked="{{t.checked}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div role="radiogroup" aria-labelledby="day-label" style="display: flex; flex-direction: column; gap: 8px">
+        <span id="day-label" style="font-size: 0.875rem; font-weight: 500">Payments come out on</span>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px">
+          <sc-for list="{{days}}" as="d" hint-placeholder-count="5">
+            <button type="button" role="radio" aria-checked="{{d.checked}}" aria-label="{{d.full}}" onClick="{{d.pick}}" style="{{d.style}}">{{d.short}}</button>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Your quote" aria-live="polite" style="background: var(--surface-default); border: 1px solid var(--border-default); border-radius: 1rem; overflow: hidden">
+      <div style="background: var(--primary-subtle); color: var(--on-primary-subtle); padding: 10px 16px; font-size: 0.875rem; font-weight: 500">Your example quote</div>
+      <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline">
+          <span style="color: var(--text-secondary)">You get</span>
+          <span style="font-family: var(--font-heading); font-size: 1.75rem; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums">{{amountText}}</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline">
+          <span style="color: var(--text-secondary)">You pay back in total</span>
+          <span style="font-family: var(--font-heading); font-size: 1.75rem; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums">{{paybackText}}</span>
+        </div>
+        <hr style="border: 0; border-top: 1px solid var(--border-default); margin: 0">
+        <div style="display: flex; justify-content: space-between; gap: 12px">
+          <span style="color: var(--text-secondary)">{{termText}} payments</span>
+          <span style="font-weight: 500; font-variant-numeric: tabular-nums">{{paymentText}}</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: 12px">
+          <span style="color: var(--text-secondary)">Payment day</span>
+          <span style="font-weight: 500">Every {{dayFull}}</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: 12px">
+          <span style="color: var(--text-secondary)">Cost of this advance</span>
+          <span style="font-weight: 500; font-variant-numeric: tabular-nums">{{costText}}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--success-text); font-size: 0.875rem">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span>No penalty for paying early.</span>
+        </div>
+      </div>
+    </section>
+
+    <p style="margin: 0; font-size: 0.75rem; line-height: 1.45; color: var(--text-tertiary)">Example based on typical pricing. Your real offer depends on your deposits and you’ll see it in full before you sign anything. Fundo advances are not loans — <button type="button" onClick="{{openSheet}}" style="padding: 0; border: 0; background: none; font: inherit; color: var(--text-link); text-decoration: underline; cursor: pointer">what that means</button>. Not available in CA or NY.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 8px">
+      <a href="Eligibility.dc.html" style="min-height: 52px; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 500; text-decoration: none">Check if I can apply
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <p style="margin: 0; text-align: center; font-size: 0.875rem; color: var(--text-secondary)">Already started? <a href="Returning.dc.html" style="font-weight: 500; color: var(--text-link)">Continue where you left off</a></p>
+    </div>
+  </main>
+
+  <sc-if value="{{sheetOpen}}" hint-placeholder-val="{{false}}">
+    <div style="position: absolute; inset: 0; background: rgba(16, 20, 22, 0.55); display: flex; align-items: flex-end">
+      <div role="dialog" aria-modal="true" aria-labelledby="sheet-title" style="width: 100%; box-sizing: border-box; background: var(--surface-default); color: var(--text-primary); border-radius: 1.5rem 1.5rem 0 0; padding: 24px 16px 24px; display: flex; flex-direction: column; gap: 12px">
+        <span aria-hidden="true" style="align-self: center; width: 40px; height: 4px; border-radius: 9999px; background: var(--border-default)"></span>
+        <h2 id="sheet-title" style="margin: 0; font-family: var(--font-heading); font-size: 1.5rem; line-height: 1.2; font-weight: 700">Not a loan — what does that mean?</h2>
+        <p style="margin: 0; color: var(--text-secondary)">A Fundo advance is a purchase of part of your future business income. You get money now and pay it back from your deposits, in fixed payments on the schedule you choose.</p>
+        <p style="margin: 0; color: var(--text-secondary)">There’s no interest rate: the cost is the fixed amount shown on your quote. Because it’s for business use, it’s meant for money you earn from your work — not wages from an employer or benefits.</p>
+        <p style="margin: 0; color: var(--text-secondary)"><strong style="color: var(--text-primary)">If a payment can’t go through,</strong> we’ll text you before we try again, and you can call us to move a payment.</p>
+        <button type="button" onClick="{{closeSheet}}" style="min-height: 52px; border: 0; border-radius: 9999px; background: var(--action-primary); color: var(--on-action-primary); font: 500 1rem var(--font-text); cursor: pointer; margin-top: 8px">Got it</button>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":360,"height":1180}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { amount: 2000, term: 16, day: 'Tue', sheetOpen: false };
+  }
+  renderVals() {
+    const TERMS = [{ w: 12, f: 1.25 }, { w: 16, f: 1.30 }, { w: 20, f: 1.35 }];
+    const DAYS = [['Mon', 'Monday'], ['Tue', 'Tuesday'], ['Wed', 'Wednesday'], ['Thu', 'Thursday'], ['Fri', 'Friday']];
+    const s = this.state;
+    const t = TERMS.find((x) => x.w === s.term);
+    const payback = Math.round(s.amount * t.f);
+    const payment = payback / t.w;
+    const money = (n, cents) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 });
+    const chip = (on) => 'min-height: 44px; border-radius: 9999px; font: 500 0.875rem var(--font-text); cursor: pointer; padding: 0 4px; ' +
+      (on ? 'background: var(--primary-subtle); color: var(--on-primary-subtle); border: 2px solid var(--brand-primary);'
+          : 'background: var(--surface-default); color: var(--text-primary); border: 1px solid var(--border-strong);');
+    const dayFull = DAYS.find((d) => d[0] === s.day)[1];
+    const theme = this.props.theme ?? 'light';
+    return {
+      theme,
+      logo: theme === 'dark' ? '/_blob/cdc516ae343798b86ac2ec7b0c5ab880' : '/_blob/b05416141ebb803767d51d5df875965f',
+      amount: s.amount,
+      amountText: money(s.amount),
+      amountSpoken: s.amount.toLocaleString('en-US') + ' dollars',
+      paybackText: money(payback),
+      paymentText: money(payment, true),
+      costText: money(payback - s.amount),
+      termText: t.w + ' weekly',
+      dayFull,
+      atMin: s.amount <= 500,
+      atMax: s.amount >= 10000,
+      dec: () => this.setState({ amount: Math.max(500, s.amount - 100) }),
+      inc: () => this.setState({ amount: Math.min(10000, s.amount + 100) }),
+      terms: TERMS.map((x) => ({ label: x.w + ' weeks', checked: String(x.w === s.term), style: chip(x.w === s.term), pick: () => this.setState({ term: x.w }) })),
+      days: DAYS.map((d) => ({ short: d[0], full: d[1], checked: String(d[0] === s.day), style: chip(d[0] === s.day), pick: () => this.setState({ day: d[0] }) })),
+      sheetOpen: s.sheetOpen,
+      openSheet: () => this.setState({ sheetOpen: true }),
+      closeSheet: () => this.setState({ sheetOpen: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>
